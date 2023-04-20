@@ -1,4 +1,4 @@
-import { StyLogo } from "./styles";
+import { StyLogo } from './styles';
 
 export const Logo = () => (
     <StyLogo>
@@ -15,4 +15,4 @@ export const Logo = () => (
                 transform="translate(-947 -840)" />
         </svg>
     </StyLogo >
-)
+);

@@ -1,15 +1,14 @@
 
-import { useContext, useEffect, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import { AiOutlineBehance, AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
-import { ThemeManagerContext } from "@/context/theme-manager";
-import GlobalStyle from '@/styles/globals'
-import { themeDark, themeLight } from "@/styles/theme";
-import { MainLayoutProps } from "./types";
-import { Header } from "./header";
-import { StyMain, StySideElement } from "./styles";
-import Link from "next/link";
-import { Loading } from "@/components/loading";
+import Link from 'next/link';
+import { useContext, useEffect, useState } from 'react';
+import { AiOutlineBehance, AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
+import { ThemeProvider } from 'styled-components';
+import { Loading } from '@/components/loading';
+import { ThemeManagerContext } from '@/context/theme-manager';
+import GlobalStyle from '@/styles/globals';
+import { Header } from './header';
+import { StyMain, StySideElement } from './styles';
+import { MainLayoutProps } from './types';
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
     const { theme } = useContext(ThemeManagerContext);
@@ -56,5 +55,5 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
             </StyMain>
             <GlobalStyle />
         </ThemeProvider>
-    )
-}
+    );
+};
