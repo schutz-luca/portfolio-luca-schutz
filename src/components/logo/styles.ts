@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyLogo = styled.div`
     height: 60px;
@@ -6,4 +6,4 @@ export const StyLogo = styled.div`
     svg path{
         fill: ${({ theme }) => theme.text};
     }
-`
+`;

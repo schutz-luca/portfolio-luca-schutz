@@ -2,20 +2,20 @@ const colors = {
   blue: '#00dbff',
   purple: '#7848a0',
   white: '#ffffff'
-}
+};
 
 const dark = {
   id: 'dark',
   background: '#181818',
   text: '#ffffff'
-}
+};
 
 const light = {
   id: 'light',
   background: '#ffffff',
   text: '#2b2b2b',
   primary: '#00b3ce'
-}
+};
 
 const colorful = {
   id: 'colorful',
@@ -25,14 +25,14 @@ const colorful = {
 	animation: gradient 15s ease infinite;
   `,
   text: '#ffffff'
-}
+};
 
 const fonts = {
   bold: 500,
   bolder: 700,
   medium: 400,
   primary: '"Montserrat", Roboto, sans-serif'
-}
+};
 
 const gradient = {
   rainbow: `
@@ -65,7 +65,7 @@ const gradient = {
       100%{background-position:0% 82%}
   }
   `
-}
+};
 
 const theme = {
   colors,
@@ -74,10 +74,10 @@ const theme = {
   transition: 'all ease-in-out 0.2s',
   primary: colors.blue,
   secondary: colors.purple
-}
+};
 
-const themeDark = { ...theme, ...dark }
-const themeLight = { ...theme, ...light }
-const themeColorful = { ...theme, ...colorful }
+const themeDark = { ...theme, ...dark };
+const themeLight = { ...theme, ...light };
+const themeColorful = { ...theme, ...colorful };
 
-export { themeDark, themeLight, themeColorful }
+export { themeDark, themeLight, themeColorful };

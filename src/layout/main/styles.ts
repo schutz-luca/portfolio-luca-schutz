@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyHeader = styled.header`
     position: fixed;
@@ -26,7 +26,7 @@ export const StyHeader = styled.header`
             }
         }
     }
-`
+`;
 
 export const StySideElement = styled.div`
     position: fixed;
@@ -88,7 +88,7 @@ export const StySideElement = styled.div`
         margin: 0px auto;
         background: ${({ theme }) => theme.text};
     }
-`
+`;
 
 export const StyMain = styled.main`
     padding: 80px 200px;
@@ -96,4 +96,4 @@ export const StyMain = styled.main`
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
-`
+`;

@@ -1,8 +1,8 @@
-import { FC } from "react"
-import { StyHome } from "./styles"
-import Image from "next/image"
-import ProfilePic from "@/assets/profile.png";
-import DotsSquareSVG from "@/assets/square-of-dots.svg";
+import Image from 'next/image';
+import { FC } from 'react';
+import DotsSquareSVG from '@/assets/square-of-dots.svg';
+import ProfilePic from '@/assets/profile.png';
+import { StyHome } from './styles';
 
 export const Home: FC = () => {
 
@@ -19,5 +19,5 @@ export const Home: FC = () => {
                 </div>
             </div>
         </StyHome>
-    )
-}
+    );
+};

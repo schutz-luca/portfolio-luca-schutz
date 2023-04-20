@@ -1,7 +1,7 @@
 /**
  * IMPORTS
  */
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyThemeButton = styled.button`
     border-radius: 50%;
@@ -25,4 +25,4 @@ export const StyThemeButton = styled.button`
         height: 100%;
         width: 100%;
     }
-`
+`;

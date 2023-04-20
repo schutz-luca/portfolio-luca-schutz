@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyLoading = styled(motion.div)`
     position: fixed;
@@ -30,4 +30,4 @@ export const StyLoading = styled(motion.div)`
     p{
         font-style: italic;
     }
-`
+`;

@@ -1,7 +1,7 @@
-import { StyLoading } from "./styles";
 import { AnimatePresence, motion } from 'framer-motion';
-import { LoadingProps } from "./types";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { StyLoading } from './styles';
+import { LoadingProps } from './types';
 
 export const Loading = ({ visible }: LoadingProps) => {
     const [hide, setHide] = useState(false);
@@ -15,7 +15,7 @@ export const Loading = ({ visible }: LoadingProps) => {
         }
         else if (hide)
             setHide(false);
-    }, [visible])
+    }, [visible, hide]);
 
     return (
         <>
@@ -103,7 +103,7 @@ export const Loading = ({ visible }: LoadingProps) => {
                                     key='loading-text'
                                     initial={{ opacity: 1 }}
                                     animate={{ opacity: 0.5 }}
-                                    transition={{ ease: "easeInOut", duration: 2, repeat: Infinity, repeatType: 'mirror' }}
+                                    transition={{ ease: 'easeInOut', duration: 2, repeat: Infinity, repeatType: 'mirror' }}
                                     exit={{ opacity: 0, translateY: 5 }}
                                 >
                                     Welcome to <b>Schutz</b>verse...
@@ -114,5 +114,5 @@ export const Loading = ({ visible }: LoadingProps) => {
                 </AnimatePresence >
             }
         </>
-    )
-}
+    );
+};
