@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyLogo = styled.div`
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 55px;
     svg path{
         fill: ${({ theme }) => theme.text};
     }

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const StyHome = styled.section`
-    height: 100vh;
-
+export const StyHome = styled.div`
     p {
         font-weight: 400;
         letter-spacing: 2px;

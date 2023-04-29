@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const StyHeader = styled.header`
     position: fixed;
-    top: 0;
-    height: 80px;
+    top: 15px;
+    height: 70px;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 0 60px;
     z-index: 2;
@@ -17,12 +17,35 @@ export const StyHeader = styled.header`
         justify-content: center;
         
         li {
-            list-style: none;
+            padding: 5px 20px;
 
             a {
                 height: 100%;
                 width: 100%;
-                padding: 5px 20px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    opacity: 0;
+                    right: -18px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    transform: rotate(0deg);
+                    transition: 0.5s;
+                    position: absolute;
+                    pointer-events: none;
+                    background-color: ${({ theme }) => theme.primary};
+                }
+
+                &.active{
+                    &::after{
+                        transform: rotate(45deg);
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
@@ -38,10 +61,18 @@ export const StySideElement = styled.div`
     padding: 0px;
     bottom: 0;
     width: 60px;
-    max-height: 70vh;
+    max-height: 50vh;
+
+    .react-icon{
+        position: absolute;
+        top: -60px;
+        height: 40px;
+        width: 40px;
+        transition: transform 2s ease-in-out;
+    }
 
     a:hover {
-        color: ${({ theme }) => theme.primary}
+        color: ${({ theme }) => theme.primary};
     }
 
     &.left{
@@ -76,7 +107,7 @@ export const StySideElement = styled.div`
         content: "";
         display: block;
         width: 1px;
-        height: 120px;
+        min-height: 80px;
         margin: 0px auto;
         background: ${({ theme }) => theme.text};
     }
@@ -91,7 +122,7 @@ export const StySideElement = styled.div`
 `;
 
 export const StyMain = styled.main`
-    padding: 80px 200px;
+    padding: 0 200px;
     margin: 0px auto;
     width: 100%;
     max-width: 1600px;

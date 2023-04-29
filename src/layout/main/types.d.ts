@@ -1,3 +1,4 @@
+import { IStateSetter } from '@/types/commons';
 import { ReactNode } from 'react';
 
 export interface MainLayoutProps {
@@ -7,4 +8,9 @@ export interface MainLayoutProps {
 export interface HeaderItemType {
     href: string;
     text: string;
+}
+
+export interface HeaderProps {
+    active: number;
+    setActive: IStateSetter<number>;
 }
