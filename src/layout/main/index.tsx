@@ -3,8 +3,8 @@ import { useScroll, useSpring, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useCallback, useContext, useEffect, useState, useRef } from 'react';
 import { AiOutlineBehance, AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
-import { FaReact } from 'react-icons/fa';
 import { ThemeProvider } from 'styled-components';
+import { CircleText } from '@/components/circle-text';
 import { Loading } from '@/components/loading';
 import { ThemeManagerContext } from '@/context/theme-manager';
 import GlobalStyle from '@/styles/globals';
@@ -119,7 +119,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         if (loading) {
             const interval = setInterval(() => {
                 setLoading(false);
-            }, 2000);
+            }, 3000);
             return () => clearInterval(interval);
         }
     }, [loading]);
@@ -191,7 +191,11 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
                 </ul>
             </StySideElement>
             <StySideElement className="right">
-                <FaReact className='react-icon' style={{ transform: `rotate(${scrollYProgress.get() * 900}deg)` }} />
+                <CircleText
+                    text='LSLSLSLSLSLSLSLSLSLSLSLSLSLS'
+                    className='scrolling-obj'
+                    style={{ transform: `rotate(${scrollYProgress.get() * 900}deg)` }}
+                />
                 <Link href='mailto:lucaschutzenhofer@hotmail.com'>
                     lucaschutzenhofer@hotmail.com
                 </Link>

@@ -10,7 +10,7 @@ const fonts = {
   bold: 500,
   bolder: 700,
   medium: 400,
-  primary: '"Quattrocento", Roboto, sans-serif'
+  primary: '"Unbounded", Roboto, sans-serif'
 };
 
 const gradient = {

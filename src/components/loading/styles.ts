@@ -27,7 +27,12 @@ export const StyLoading = styled(motion.div)`
         width: 150px;
     }
 
-    p{
+    p {   
+        position: absolute;
+        bottom: 15px;
+        background: ${({ theme }) => theme.background};
+        padding: 5px 15px;
+        font-weight: 200;
         font-style: italic;
     }
 `;

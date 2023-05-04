@@ -39,8 +39,8 @@ export default createGlobalStyle`
     width: 100%;
     height: 101vh;
     display: flex;
-    justify-content: flex-start;
-    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
     
     span{
       display: block;

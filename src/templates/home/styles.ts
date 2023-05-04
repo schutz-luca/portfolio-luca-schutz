@@ -1,26 +1,39 @@
 import styled from 'styled-components';
 
 export const StyHome = styled.div`
+    .text-container {
+        margin-right: 100px;
+    }
     p {
-        font-weight: 400;
+        font-weight: 200;
         letter-spacing: 2px;
         line-height: 30px;
         text-align: justify;
 
         b {
             letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 19px;
         }
     }
 
     h1 {
         font-weight: 400;
         margin: 10px 0;
+        line-height: 80px;
+        margin-bottom: 60px;
 
         b{
             color: ${({ theme }) => theme.primary}
+        }
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        font-weight: 300;
+        font-size: 20px;
+        b {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
     }
 
@@ -29,22 +42,21 @@ export const StyHome = styled.div`
         position: relative;
     }
 
-    .image-container{
+    .image-container {
         position: relative;
-        margin-left: 30px;
         width: 70%;
         transition: ${({ theme }) => theme.transition};
         display: flex;
         justify-content: flex-end;
+        margin-top: 30px;
 
         .image {
             object-fit: cover;
             object-position: center;
 
             height: 100%;
-            width: 100%;
-            max-height: 600px;
-            max-width: 600px;
+            max-height: 350px;
+            max-width: 350px;
             border-radius: 5px;
 
             filter: grayscale(1);

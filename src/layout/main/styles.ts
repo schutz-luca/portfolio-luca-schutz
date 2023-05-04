@@ -61,13 +61,14 @@ export const StySideElement = styled.div`
     padding: 0px;
     bottom: 0;
     width: 60px;
-    max-height: 50vh;
+    max-height: 60vh;
 
-    .react-icon{
+    .scrolling-obj {
+        fill: ${({ theme }) => theme.text};
         position: absolute;
-        top: -60px;
-        height: 40px;
-        width: 40px;
+        top: -80px;
+        height: 60px;
+        width: 60px;
         transition: transform 2s ease-in-out;
     }
 
@@ -100,6 +101,8 @@ export const StySideElement = styled.div`
             letter-spacing: 0.1em;
             -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;
+            font-weight: 300;
+            letter-spacing: 4px;
         }
     }
 
