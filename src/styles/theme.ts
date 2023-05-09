@@ -1,6 +1,7 @@
 const colors = {
   blue: '#00dbff',
-  purple: '#7848a0',
+  purple: '#b25bff',
+  orange: '#ff8b56',
   white: '#ffffff',
   black: '#181818',
   darkGray: '#2b2b2b'
@@ -10,7 +11,8 @@ const fonts = {
   bold: 500,
   bolder: 700,
   medium: 400,
-  primary: '"Unbounded", Roboto, sans-serif'
+  primary: '"Unbounded", Roboto, sans-serif',
+  secondary: '"Montserrat", Roboto, sans-serif'
 };
 
 const gradient = {

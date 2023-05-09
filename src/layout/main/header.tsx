@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import { Logo } from '@/components/logo';
-import { ThemeButton } from '@/templates/theme-button';
+import { Logo } from '@/src/components/logo';
+import { ThemeButton } from '@/src/templates/theme-button';
 import { StyHeader } from './styles';
 import { HeaderItemType, HeaderProps } from './types';
 

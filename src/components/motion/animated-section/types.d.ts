@@ -1,4 +1,4 @@
-import { IParent } from '@/types/commons';
+import { IParent } from '@/src/types/commons';
 
 export interface AnimatedSectionProps extends IParent {
     id: string;

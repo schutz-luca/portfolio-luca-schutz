@@ -37,16 +37,12 @@ export default createGlobalStyle`
   section {
     box-sizing: border-box;
     width: 100%;
-    height: 101vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     
-    span{
-      display: block;
-      transform: translateY(-50px);
-      opacity: 0;
-    }
+
   }
 
   @keyframes gradient {
@@ -83,6 +79,10 @@ export default createGlobalStyle`
     font-size: 100px;
   }
 
+  h2 {
+    font-size: 60px;
+  }
+
   a {
       color: ${({ theme }) => theme.text};
       text-decoration: none;
@@ -106,6 +106,11 @@ export default createGlobalStyle`
     list-style: none;
   }
 
+  div.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   @-ms-viewport {
     width: device-width;
   }
@@ -124,18 +129,18 @@ export default createGlobalStyle`
 
     *::-webkit-scrollbar-track {
       border-radius: 40px;
-      background: #0001;
+      background: ${({ theme }) => theme.text}20;
     }
 
     *::-webkit-scrollbar-thumb {
       border-radius: 40px;
-      background-color: #2225;
+      background-color: ${({ theme }) => theme.text}80;
       transition: background-color 0.3s ease-out;
     }
 
-    *:hover::-webkit-scrollbar-thumb {
-      background-color: #2228;
-    }
+    /* *:hover::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.text}80;
+    } */
 
     .progress {
       position: fixed;

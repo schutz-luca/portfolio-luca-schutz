@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { useCallback, useContext, useEffect, useState, useRef } from 'react';
 import { AiOutlineBehance, AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { ThemeProvider } from 'styled-components';
-import { CircleText } from '@/components/circle-text';
-import { Loading } from '@/components/loading';
-import { ThemeManagerContext } from '@/context/theme-manager';
-import GlobalStyle from '@/styles/globals';
+import { CircleText } from '@/src/components/circle-text';
+import { Loading } from '@/src/components/loading';
+import { AppManagerContext } from '@/src/context/app-manager';
+import GlobalStyle from '@/src/styles/globals';
 import { Header } from './Header';
 import { StyMain, StySideElement } from './styles';
 import { MainLayoutProps } from './types';
@@ -19,7 +19,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     const [waitScroll, setWaitScroll] = useState(false);
     const [isKeyUp, setIsKeyUp] = useState(true);
 
-    const { theme } = useContext(ThemeManagerContext);
+    const { theme } = useContext(AppManagerContext);
 
     const mainRef = useRef<HTMLElement | null>(null);
 
@@ -147,7 +147,8 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     // Handle with listeners
     useEffect(() => {
         document.removeEventListener('mousewheel', handleMouseWheel);
-        document.removeEventListener('keydown', handleMouseWheel);
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('keyup', handleKeyUp);
         document.addEventListener('mousewheel', handleMouseWheel, { passive: false });
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);

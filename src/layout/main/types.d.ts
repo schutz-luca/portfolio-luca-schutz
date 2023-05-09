@@ -1,4 +1,4 @@
-import { IStateSetter } from '@/types/commons';
+import { IStateSetter } from '@/src/types/commons';
 import { ReactNode } from 'react';
 
 export interface MainLayoutProps {

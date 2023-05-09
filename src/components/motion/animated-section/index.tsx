@@ -12,7 +12,8 @@ export const AnimatedSection: FC<AnimatedSectionProps> = ({ children, id }) => {
                 style={{
                     transform: isInView ? 'none' : 'translateY(-10px)',
                     opacity: isInView ? 1 : 0,
-                    transition: 'opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s, transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s'
+                    transition: 'opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s, transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+                    width: '100%'
                 }}
             >
                 {children}

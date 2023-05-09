@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ThemeManagerProvider } from '@/context/theme-manager';
+import { ThemeManagerProvider } from '@/src/context/app-manager';
 
 export default function App({ Component, pageProps }: AppProps) {
   // const inter = Inter({ subsets: ['latin'] })

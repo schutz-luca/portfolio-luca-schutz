@@ -1,13 +1,12 @@
-import { AnimatedSection } from '@/components/motion';
-import { MainLayout } from '@/layout/main';
-import { Home } from '@/templates/home';
+import { AnimatedSection } from '@/src/components/motion';
+import { MainLayout } from '@/src/layout/main';
+import { About } from '@/src/templates/about';
+import { Home } from '@/src/templates/home';
 
 const HomePage = () => (
     <MainLayout>
         <Home />
-        <AnimatedSection id="about">
-            <h1>about</h1>
-        </AnimatedSection>
+        <About />
         <AnimatedSection id="experience">
             <h1>experience</h1>
         </AnimatedSection>
