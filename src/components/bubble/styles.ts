@@ -7,6 +7,7 @@ export const StyBubble = styled.span`
     font-weight: 400;
     padding: 3px 6px;
     margin-right: 8px;
+    margin-top: 10px;
     cursor: default;
     transition: ${({ theme }) => theme.transition};
     white-space: nowrap;

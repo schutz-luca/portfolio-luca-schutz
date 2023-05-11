@@ -24,6 +24,7 @@ export default createGlobalStyle`
     background: black;
     background: ${({ theme }) => theme.background};
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -80,7 +81,7 @@ export default createGlobalStyle`
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   a {

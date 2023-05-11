@@ -17,10 +17,10 @@ export const CardView: FC<CardViewProps> = ({ card, closeView }) => {
                 {imageCredit.text}
               </Link>
             }
-            <Image className="card-image" src={image} alt=""  width={800} height={800}/>
+            <Image className="card-image" src={image} alt="" width={900} height={900} />
           </motion.div>
           <motion.div className="title-container" layoutId={`title-container-${id}`}>
-            <span className="category">{category}</span>
+            <span className="category open">{category}</span>
             <h3>{title}</h3>
             <p>{description}</p>
           </motion.div>

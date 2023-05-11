@@ -24,8 +24,8 @@ export const StyCardContainer = styled.div`
 
   .card {
     position: relative;
-    padding: 25px;
-    height: 600px;
+    padding: 15px;
+    height: 500px;
     flex: 0 0 40%;
     max-width: 33%;
     cursor: pointer;
@@ -78,12 +78,15 @@ export const StyCardContainer = styled.div`
     font-weight: 200;
     text-transform: uppercase;
     font-size: 16px;
+
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.9);
     
-    svg{
+    svg {
       font-size: 18px;
+      text-shadow: 5px 5px 10px rgba(0,0,0,0.9);
     }
 
-    &:hover{
+    &:hover {
       transform: translateY(-5px);
     }
   }
@@ -116,29 +119,30 @@ export const StyCardContainer = styled.div`
       z-index: 1;
       right: 8px;
       bottom: 4px;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 200;
       opacity: 0.7;
+      text-shadow: 5px 5px 5px rgba(0,0,0,0.9);
     }
 
     img {
       transition: all ease-out 0.4s;
-      filter: brightness(0.6);
+      filter: brightness(0.55);
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
     &:hover {
-      img{
-      filter: brightness(0.8);
-    }
+      img {
+        filter: brightness(0.8);
+      }
     }
 
     &.open {
       width: 100%;
       height: 180px;
-      img{
+      img {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -156,6 +160,8 @@ export const StyCardContainer = styled.div`
     top: 15px;
     left: 15px;
     max-width: 300px;
+    text-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    pointer-events: none;
 
     h3 {
       font-size: 25px;
@@ -166,6 +172,7 @@ export const StyCardContainer = styled.div`
     top: 30px;
     left: 30px;
     max-width: unset;
+    width: 100%;
 
     h3 {
       font-size: 40px;
@@ -182,6 +189,19 @@ export const StyCardContainer = styled.div`
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
+    width: 100%;
+
+    &:not(.open)::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: ${({ theme }) => theme.colors.white};
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 5px;
+      z-index: 0;
+      border-radius: 3px;
+    }
   }
 
   .overlay {
@@ -203,15 +223,24 @@ export const StyCardContainer = styled.div`
       font-size: 18px;
       font-family: ${({ theme }) => theme.fonts.secondary};
     }
+
+    a {
+      color: ${({ theme }) => theme.primary};
+      text-decoration: underline;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
     
     h4 {
-      margin: 15px 0;
+      margin-top: 5px;
       opacity: 0.9;
     }
 
     &.open{
       overflow-y: auto;
-      padding: 35px;
+      padding: 20px 35px;
       margin-top: 180px;
     }
   }
