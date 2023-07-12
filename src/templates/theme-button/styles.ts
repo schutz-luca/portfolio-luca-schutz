@@ -18,7 +18,6 @@ export const StyThemeButton = styled.button`
     &.light {
         background: ${({ theme }) => theme.gradient.rainbow};
         color: ${({ theme }) => theme.colors.white};
-        opacity: 0.7;
     }  
 
     svg{

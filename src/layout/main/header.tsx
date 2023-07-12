@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { Logo } from '@/src/components/logo';
+import { SideMenu } from '@/src/components/motion/side-menu';
 import { ThemeButton } from '@/src/templates/theme-button';
 import { StyHeader } from './styles';
 import { HeaderItemType, HeaderProps } from './types';
@@ -17,7 +18,7 @@ export const Header: FC<HeaderProps> = ({ active, setActive }) => {
     return (
         <StyHeader>
             <Logo />
-            <ul>
+            <ul className='topmenu'>
                 {headerItems.map((item, index) => (
                     <li key={item.href}>
                         <Link
@@ -34,6 +35,7 @@ export const Header: FC<HeaderProps> = ({ active, setActive }) => {
                     <ThemeButton />
                 </li>
             </ul>
+            <SideMenu options={headerItems} />
         </StyHeader>
     );
 };

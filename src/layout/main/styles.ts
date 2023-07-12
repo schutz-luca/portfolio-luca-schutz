@@ -1,15 +1,34 @@
 import styled from 'styled-components';
+import { devices } from '@/src/styles/devices';
 
 export const StyHeader = styled.header`
     position: fixed;
-    top: 15px;
     height: 70px;
     width: 100%;
+    top: 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 10px 60px;
     z-index: 2;
+    background: ${({ theme }) => theme.background};
+
+    @media ${devices.tablet} {
+        padding: 5px 20px;
+    }
+
+    .sidemenu {
+        display: none;;
+    }
+    @media ${devices.tablet} {
+        .topmenu {
+            display: none;
+        }
+        .sidemenu {
+            display: block;
+        }
+    }
+    
 
     ul {
         display: flex;
@@ -106,6 +125,21 @@ export const StySideElement = styled.div`
         }
     }
 
+    @media ${devices.tablet} {
+        &.left {
+            left: 30px;
+        }
+
+        &.right {
+            right: 30px;
+        }
+    }
+
+    @media ${devices.tabletS} {
+        display: none;
+    }
+
+
     &::after{
         content: "";
         display: block;
@@ -126,8 +160,24 @@ export const StySideElement = styled.div`
 
 export const StyMain = styled.main`
     padding: 0 200px;
-    margin: 0px auto;
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
+    position: absolute;
+    top: 70px;
+    left: 0; 
+    right: 0;
+    margin: 0px auto;
+
+    @media ${devices.laptopL} {
+        padding: 0 130px;
+    }
+
+    @media ${devices.tabletS} {
+        padding: 0 50px;
+    }
+
+    @media ${devices.mobileL} {
+        padding: 0 30px;
+    }
 `;

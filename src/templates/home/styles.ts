@@ -1,8 +1,13 @@
+import { devices } from '@/src/styles/devices';
 import styled from 'styled-components';
 
 export const StyHome = styled.div`
     .text-container {
         margin-right: 100px;
+
+        @media ${devices.laptopL} {
+            margin: 0;
+        }
     }
     p {
         font-weight: 200;
@@ -15,11 +20,21 @@ export const StyHome = styled.div`
         }
     }
 
+    .presenting{
+        @media ${devices.heightBreak} {
+            margin-top: 30px;
+        }
+    }
+
     h1 {
         font-weight: 400;
-        margin: 10px 0;
         line-height: 80px;
+        margin-top: 10px;
         margin-bottom: 60px;
+
+        @media ${devices.mobileL} {
+            line-height: 50px;
+        }
 
         b{
             color: ${({ theme }) => theme.primary}
@@ -40,15 +55,24 @@ export const StyHome = styled.div`
     .flex-row {
         display: flex;
         position: relative;
+
+        @media ${devices.laptopL} {
+            flex-direction: column;
+        }
     }
 
     .image-container {
         position: relative;
-        width: 70%;
+        width: 100%;
         transition: ${({ theme }) => theme.transition};
-        display: flex;
-        justify-content: flex-end;
         margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media ${devices.laptopL} {
+            margin-top: 50px;
+        }
 
         .image {
             object-fit: cover;
@@ -70,14 +94,21 @@ export const StyHome = styled.div`
         .dots {
             transition: ${({ theme }) => theme.transition};
             position: absolute;
-            right: -10%;
-            top: -10%;
+            left: -5rem;
+            top: -2rem;
             z-index: -1;
             height: 60%;
             
             path {
                 transition: ${({ theme }) => theme.transition};
                 fill: ${({ theme }) => theme.text};
+            }
+
+            @media ${devices.laptopL} {
+                left: -20rem;
+                right: 0;
+                top: -1.5rem;
+                margin: auto;
             }
         }
 

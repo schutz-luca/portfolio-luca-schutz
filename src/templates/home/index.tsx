@@ -10,7 +10,7 @@ export const Home: FC = () => (
         <StyHome>
             <div className="flex-row">
                 <div className='text-container'>
-                    <p>hello buddy, my name is</p>
+                    <p className='presenting'>hello buddy, my name is</p>
                     <h1>
                         <small>Luca</small>
                         <br />

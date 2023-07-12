@@ -33,17 +33,25 @@ export default createGlobalStyle`
     font: 400 1rem ${({ theme }) => theme.fonts.primary};
     color: ${({ theme }) => theme.text};
     transition: ${({ theme }) => theme.transition};
+
+    @media ${devices.laptopL} {
+      font-size: 0.8rem;
+    }
   }
 
   section {
     box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-bottom: 8rem;
 
+    @media ${devices.heightBreak} {
+      display: block;
+      height: unset;
+    }
   }
 
   @keyframes gradient {
@@ -77,7 +85,15 @@ export default createGlobalStyle`
   }
 
   h1 {
-    font-size: 100px;
+    font-size: 6.25rem;
+
+    @media ${devices.laptopL} {
+      font-size: 5rem;
+    }
+
+    @media ${devices.mobileL} {
+      font-size: 4rem;
+    }
   }
 
   h2 {
@@ -129,20 +145,15 @@ export default createGlobalStyle`
     }
 
     *::-webkit-scrollbar-track {
-      border-radius: 40px;
-      background: ${({ theme }) => theme.text}20;
+      background: ${({ theme }) => theme.colors.darkGray}ee;
     }
 
     *::-webkit-scrollbar-thumb {
       border-radius: 40px;
-      background-color: ${({ theme }) => theme.text}80;
+      background-color: ${({ theme }) => theme.colors.white}30;
       transition: background-color 0.3s ease-out;
     }
-
-    /* *:hover::-webkit-scrollbar-thumb {
-      background-color: ${({ theme }) => theme.text}80;
-    } */
-
+    
     .progress {
       position: fixed;
       left: 0;

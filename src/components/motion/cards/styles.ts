@@ -263,37 +263,4 @@ export const StyCardContainer = styled.div`
       margin-bottom: 10px;
     }
   }
-
-  @media only screen and (max-width: 800px) {
-    .card {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-
-    .card:nth-child(4n + 1),
-    .card:nth-child(4n + 4) {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .card {
-      flex: 1 0 100%;
-      max-width: 100%;
-      padding: 10px;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .card:nth-child(4n + 1),
-    .card:nth-child(4n + 4) {
-      flex: 1 0 100%;
-      max-width: 100%;
-    }
-
-    .card-content-container.open {
-      padding: 0;
-    }
-  }
 `;
