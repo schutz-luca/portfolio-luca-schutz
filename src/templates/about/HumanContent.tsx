@@ -3,7 +3,7 @@ import { Bubble } from '@/src/components/bubble';
 export const HumanContent = () => (
     <>
         <p>
-            Ever since I was a child, I've always enjoyed trying to understand the world and the people around me.
+            Ever since I was a child, I&apos;ve always enjoyed trying to understand the world and the people around me.
             I looked in art, music, philosophy, astronomy, psychology for solutions to my doubts,
             I found results that made me someone very emotionally mature.
         </p>
