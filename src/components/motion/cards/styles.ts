@@ -1,3 +1,4 @@
+import { devices } from '@/src/styles/devices';
 import styled from 'styled-components';
 
 export const StyCardContainer = styled.div`
@@ -20,18 +21,33 @@ export const StyCardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+
+    @media ${devices.laptop}{
+      flex-direction: column;
+
+      .card{
+        width: 100%;
+        max-width: unset;
+        height: 280px;
+        flex: unset;
+      }
+    }
   }
 
   .card {
     position: relative;
     padding: 15px;
-    height: 500px;
+    height: 700px;
     flex: 0 0 40%;
     max-width: 33%;
     cursor: pointer;
 
     &:hover{
       transform: translateY(-5px);
+    }
+
+    @media (max-height: 970px){
+      height: 500px;
     }
   }
 
@@ -49,7 +65,7 @@ export const StyCardContainer = styled.div`
     position: fixed;
     z-index: 11;
     overflow: auto;
-    padding: 40px 0;
+    padding: 80px 0;
     pointer-events: none;
 
   }
@@ -96,6 +112,10 @@ export const StyCardContainer = styled.div`
     max-width: 60%;
     overflow: hidden;
     pointer-events: visible;
+
+    @media ${devices.laptop} {
+      max-width: 80%;
+    }
   }
 
   .card-open-link {
@@ -141,11 +161,19 @@ export const StyCardContainer = styled.div`
 
     &.open {
       width: 100%;
-      height: 180px;
+      height: 200px;
       img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+      }
+
+      @media ${devices.tablet} {
+        height: 250px;
+      }
+
+      @media ${devices.mobileM} {
+        height: 230px;
       }
     }
   }
@@ -166,16 +194,30 @@ export const StyCardContainer = styled.div`
     h3 {
       font-size: 25px;
     }
+
+    @media ${devices.laptop}{
+      max-width: unset;
+      width: 100%;
+    }
   }
 
   .open .title-container {
     top: 30px;
-    left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
     max-width: unset;
     width: 100%;
 
     h3 {
       font-size: 40px;
+
+      @media ${devices.tablet} {
+        font-size: 30px;
+      }
+    }
+
+    @media ${devices.mobileL} {
+      padding-right: 15px;
     }
   }
 
@@ -190,17 +232,22 @@ export const StyCardContainer = styled.div`
     font-size: 14px;
     text-transform: uppercase;
     width: 100%;
+    margin-bottom: 15px;
 
     &:not(.open)::after {
       content: '';
       width: 100%;
       height: 1px;
-      background: ${({ theme }) => theme.colors.white};
+      background: ${({ theme }) => theme.colors.white}90;
       position: absolute;
       margin-left: 10px;
       margin-top: 5px;
       z-index: 0;
       border-radius: 3px;
+    }
+
+    @media ${devices.laptop}{
+      background: transparent;
     }
   }
 
@@ -241,15 +288,61 @@ export const StyCardContainer = styled.div`
     &.open{
       overflow-y: auto;
       padding: 20px 35px;
-      margin-top: 180px;
+      margin-top: 200px;
+
+      @media ${devices.tablet}{
+        margin-top: 250px;
+        padding: 10px 25px;
+      }
+
+      @media ${devices.mobileM}{
+        margin-top: 230px;
+      }
+
+      @media (max-width: 800px){
+        .description{
+          font-size: 12px;
+          line-height: 18px;    
+        }
+      }
+
+      .skills {
+        margin-top: 12px;
+
+        @media (max-height: 665px){
+          margin: none;
+        }
+      }
+
+      .description {
+        @media (max-height: 725px){
+          font-size: 14px;
+            line-height: 18px;
+        }
+        
+        @media (max-height: 665px) {
+          display: none;
+        }
+        
+        @media (max-width: 770px){
+          display: none;
+        }
+      }
+
+      overflow-y: auto;
+      overflow-x: hidden;
     }
   }
 
   p {
-    opacity: 0.75;
+    opacity: 0.9;
     font-size: 20px;
     line-height: 28px;
     font-weight: 200;
+
+    @media ${devices.tablet}{
+        font-size: 16px;
+      }
   }
 
   div.divisor {

@@ -46,7 +46,7 @@ export const About = () => {
 
     return (
         <AnimatedSection id="about">
-            <h2>about me</h2>
+            <h2>what am I good at?</h2>
             <Cards cards={cards} onSelect={onSelect} onClose={onClose} />
         </AnimatedSection>
     );

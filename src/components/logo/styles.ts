@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyLogo = styled.div`
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     color: ${({ theme }) => theme.text};
     border: 1px solid ${({ theme }) => theme.text};
     display: flex;
@@ -27,15 +27,24 @@ export const StyLogo = styled.div`
         height: 98%;
         width: 98%;
         padding: 5px;
-        background: ${({ theme }) => theme.background};
+        /* background: ${({ theme }) => theme.background}; */
         border-radius: 50%;
-        transition: opacity ease-in 0.2s;
+        transition: opacity ease-out 1.4s;
 
-        -webkit-animation: rotating 8s linear infinite;
-        -moz-animation: rotating 8s linear infinite;
-        -ms-animation: rotating 8s linear infinite;
-        -o-animation: rotating 8s linear infinite;
-        animation: rotating 8s linear infinite, hide 10s linear infinite;
+        animation: rotating 8s linear infinite;
+        opacity: 1;
+
+        &.hide {
+            opacity: 0;
+        }
+    }
+
+    text {
+        transition: opacity ease-out 1.4s;
+        opacity: 0;
+        &.hide {
+            opacity: 1;
+        }
     }
 
 

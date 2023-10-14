@@ -30,7 +30,7 @@ export const StySideMenu = styled(motion.nav)`
         -ms-user-select: none;
         cursor: pointer;
         position: absolute;
-        top: 18px;
+        top: 5px;
         right: 20px;
         width: 44px;
         height: 44px;

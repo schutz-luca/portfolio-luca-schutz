@@ -16,13 +16,52 @@ export default createGlobalStyle`
   *::after {
     box-sizing: inherit;
   }
+  
+
+  html {
+    ${({ theme }) => `
+      background: repeating-linear-gradient(90deg, ${theme.backgroundSoft} 0, ${theme.backgroundSoft} 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, ${theme.backgroundSoft} 0, ${theme.backgroundSoft} 5%, transparent 0, transparent 50%);
+      background-size: 20em 20em;
+      background-color: ${theme.background};
+      opacity: 1;
+      `
+      // background: radial-gradient(circle at top left,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%) , radial-gradient(circle at bottom left,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%), radial-gradient(circle at top right ,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%) , radial-gradient(circle at bottom right,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%),radial-gradient(circle, transparent 25%, ${theme.background}  26%),linear-gradient(45deg, transparent 46%, ${theme.backgroundSoft} 47%, ${theme.backgroundSoft} 52%, transparent 53%), linear-gradient(135deg, transparent 46%, ${theme.backgroundSoft} 47%, ${theme.backgroundSoft} 52%, transparent 53%);
+      // background: radial-gradient(circle at center ,${theme.backgroundSoft}, ${theme.backgroundSoft} 10%, transparent 10%, transparent  20%, ${theme.backgroundSoft} 20%, ${theme.backgroundSoft} 30%, transparent 30%, transparent 40%, ${theme.backgroundSoft} 40%, ${theme.backgroundSoft} 50%, transparent 50%, transparent 60%, ${theme.backgroundSoft} 60%, ${theme.backgroundSoft} 70%, transparent 70%, transparent 80%, ${theme.backgroundSoft} 80%, ${theme.backgroundSoft} 90%, transparent 90%);
+    }
+
+    -webkit-animation: rainbow 100s linear infinite;
+    -z-animation: rainbow 100s linear infinite;
+    -o-animation: rainbow 100s linear infinite;
+    animation: rainbow 100s linear infinite;
+    
+    @-webkit-keyframes rainbow {
+      0%{background-position:0% 0%}
+      100%{background-position:100% 100%}
+      /* 100%{background-position:0% 0%} */
+    }
+    @-moz-keyframes rainbow {
+      0%{background-position:0% 0%}
+      100%{background-position:100% 100%}
+      /* 100%{background-position:0% 0%} */
+    }
+    @-o-keyframes rainbow {
+      0%{background-position:0% 0%}
+      100%{background-position:100% 100%}
+      /* 100%{background-position:0% 0%} */
+    }
+    @keyframes rainbow { 
+      0%{background-position:0% 0%}
+      100%{background-position:100% 100%}
+      /* 100%{background-position:0% 0%} */
+    }
+}
 
   html {
     box-sizing: border-box;
     height: -webkit-fill-available;
     -ms-overflow-style: scrollbar;
-    background: black;
-    background: ${({ theme }) => theme.background};
+    /* background: black; */
+    ${({ theme }) => theme.id === 'colorful' ? `background: ${theme.background};` : ''}
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
@@ -98,6 +137,7 @@ export default createGlobalStyle`
 
   h2 {
     font-size: 40px;
+    padding: 10px 0;
   }
 
   a {
@@ -155,7 +195,7 @@ export default createGlobalStyle`
     }
     
     .progress {
-      position: fixed;
+      position: sticky;
       left: 0;
       right: 0;
       height: 5px;
@@ -163,5 +203,10 @@ export default createGlobalStyle`
       background: ${({ theme }) => theme.progress};
       top: 0;
       z-index: 9;
+      top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
     }
 `;

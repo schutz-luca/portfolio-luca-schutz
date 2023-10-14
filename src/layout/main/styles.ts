@@ -3,7 +3,7 @@ import { devices } from '@/src/styles/devices';
 
 export const StyHeader = styled.header`
     position: fixed;
-    height: 70px;
+    /* height: 70px; */
     width: 100%;
     top: 0;
     display: flex;
@@ -11,7 +11,12 @@ export const StyHeader = styled.header`
     justify-content: space-between;
     padding: 10px 60px;
     z-index: 2;
-    background: ${({ theme }) => theme.background};
+    ${({ theme }) => theme.id === 'colorful' ? '' : `background: ${theme.background}99`};
+
+    // Glass effect
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 
     @media ${devices.tablet} {
         padding: 5px 20px;
@@ -81,6 +86,7 @@ export const StySideElement = styled.div`
     bottom: 0;
     width: 60px;
     max-height: 60vh;
+    z-index: 2;
 
     .scrolling-obj {
         fill: ${({ theme }) => theme.text};
@@ -146,7 +152,7 @@ export const StySideElement = styled.div`
         width: 1px;
         min-height: 80px;
         margin: 0px auto;
-        background: ${({ theme }) => theme.text};
+        background: ${({ theme }) => theme.text}80;
     }
     &::before{
         content: "";
@@ -154,7 +160,7 @@ export const StySideElement = styled.div`
         width: 1px;
         height: 100vh;
         margin: 0px auto;
-        background: ${({ theme }) => theme.text};
+        background: ${({ theme }) => theme.text}80;
     }
 `;
 
@@ -168,6 +174,7 @@ export const StyMain = styled.main`
     left: 0; 
     right: 0;
     margin: 0px auto;
+    z-index: 0;
 
     @media ${devices.laptopL} {
         padding: 0 130px;

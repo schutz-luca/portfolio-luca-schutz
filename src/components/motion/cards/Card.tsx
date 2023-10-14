@@ -12,7 +12,7 @@ export const Card: FC<ICard> = ({ id, title, category, description, image }) => 
           <Image className="card-image" src={image} alt="" width={800} height={800}/>
         </motion.div>
         <motion.div className="title-container" layoutId={`title-container-${id}`} >
-          <span className="category">{category}</span>
+          <div className="category">{category}</div>
           <h3>{title}</h3>
           <p>{description}</p>
         </motion.div>

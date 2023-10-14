@@ -10,7 +10,7 @@ export const Header: FC<HeaderProps> = ({ active, setActive }) => {
     const headerItems: HeaderItemType[] = [
         { href: '/#home', text: 'home' },
         { href: '/#about', text: 'about' },
-        { href: '/#experience', text: 'experience' },
+        // { href: '/#experience', text: 'experience' },
         { href: '/#contact', text: 'contact' }
     ];
     const handleActive = (index: number) => setActive(index);
