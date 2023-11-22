@@ -13,8 +13,6 @@ export const Logo: FC<LogoProps> = ({ loadingPage }) => {
         return () => clearInterval(interval);
     }, [hideHandler]);
 
-    console.log(hideHandler);
-
     return (
         <StyLogo className={loadingPage ? 'loading-page' : ''}>
             <FaReact className={`react-icon${hideHandler ? ' hide' : ''}`} />

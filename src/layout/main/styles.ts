@@ -13,11 +13,8 @@ export const StyHeader = styled.header`
     z-index: 2;
     ${({ theme }) => theme.id === 'colorful' ? '' : `background: ${theme.background}99`};
 
-    // Glass effect
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
+    ${({ theme }) => theme.effects.glass};
+    
     @media ${devices.tablet} {
         padding: 5px 20px;
     }
