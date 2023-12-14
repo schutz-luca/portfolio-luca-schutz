@@ -12,7 +12,7 @@ import { Header } from './Header';
 import { StyMain, StySideElement } from './styles';
 import { MainLayoutProps } from './types';
 
-export const MainLayout = ({ children }: MainLayoutProps) => {
+export const MainLayout = ({ children, headerItems }: MainLayoutProps) => {
     const [loading, setLoading] = useState(true);
     const [sections, setSections] = useState<HTMLElement[]>([]);
     const [activeSection, setActiveSection] = useState<number>(0);
@@ -171,7 +171,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <ThemeProvider theme={theme}>
             <Loading visible={loading} />
-            <Header active={activeSection} setActive={setActiveSection} />
+            <Header active={activeSection} setActive={setActiveSection} headerItems={headerItems} />
             <StySideElement className="left">
                 <ul>
                     <li>

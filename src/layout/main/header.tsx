@@ -4,16 +4,16 @@ import { Logo } from '@/src/components/logo';
 import { SideMenu } from '@/src/components/motion/side-menu';
 import { ThemeButton } from '@/src/templates/theme-button';
 import { StyHeader } from './styles';
-import { HeaderItemType, HeaderProps } from './types';
+import { HeaderProps } from './types';
 
-export const Header: FC<HeaderProps> = ({ active, setActive }) => {
-    const headerItems: HeaderItemType[] = [
-        { href: '/#home', text: 'home' },
-        { href: '/#about', text: 'about' },
-        // { href: '/#experience', text: 'experience' },
-        { href: '/#contact', text: 'contact' }
-    ];
-    const handleActive = (index: number) => setActive(index);
+export const Header: FC<HeaderProps> = ({ active, setActive, headerItems }) => {
+
+    const handleActive = (index: number, action?: () => void) => {
+        if (action)
+            action();
+
+        setActive(index);
+    }
 
     return (
         <StyHeader>
@@ -22,8 +22,8 @@ export const Header: FC<HeaderProps> = ({ active, setActive }) => {
                 {headerItems.map((item, index) => (
                     <li key={item.href}>
                         <Link
-                            onClick={() => handleActive(index)}
-                            href={item.href}
+                            onClick={() => handleActive(index, item.action)}
+                            href={item.href || ''}
                             className={active === index ? 'active' : ''}
                             scroll={false}
                         >

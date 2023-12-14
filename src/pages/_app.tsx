@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeManagerProvider } from '@/src/context/app-manager';
+import { SessionProvider } from 'next-auth/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   // const inter = Inter({ subsets: ['latin'] })
@@ -13,9 +14,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ThemeManagerProvider>
-        <Component {...pageProps} />
-      </ThemeManagerProvider>
+      <SessionProvider session={pageProps.session}>
+        <ThemeManagerProvider>
+          <Component {...pageProps} />
+        </ThemeManagerProvider>
+      </SessionProvider>
     </>
   );
 }

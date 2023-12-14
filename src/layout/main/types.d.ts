@@ -2,15 +2,18 @@ import { IStateSetter } from '@/src/types/commons';
 import { ReactNode } from 'react';
 
 export interface MainLayoutProps {
-    children: ReactNode
+    children: ReactNode;
+    headerItems: HeaderItemType[];
 }
 
 export interface HeaderItemType {
-    href: string;
     text: string;
+    href?: string;
+    action?: () => void
 }
 
 export interface HeaderProps {
     active: number;
     setActive: IStateSetter<number>;
+    headerItems: HeaderItemType[];
 }
