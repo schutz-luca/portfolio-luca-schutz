@@ -12,6 +12,7 @@ const HomePage = () => (
             // { href: '/#experience', text: 'experience' },
             { href: '/#contact', text: 'contact' }
         ]}
+        isMainPage
     >
         <Home />
         <About />
