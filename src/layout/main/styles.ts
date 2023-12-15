@@ -1,15 +1,49 @@
 import styled from 'styled-components';
+import { devices } from '@/src/styles/devices';
 
 export const StyHeader = styled.header`
     position: fixed;
-    top: 0;
-    height: 80px;
+    height: 70px;
     width: 100%;
+    top: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 10px 60px;
     z-index: 2;
+    ${({ theme }) => theme.id === 'colorful' ? '' : `background: ${theme.background}99`};
+
+    ${({ theme }) => theme.effects.glass};
+    
+    @media ${devices.tablet} {
+        padding: 5px 20px;
+    }
+
+    .sidemenu {
+        display: none;;
+    }
+    @media ${devices.tablet} {
+        .topmenu {
+            display: none;
+        }
+        .sidemenu {
+            display: block;
+        }
+    }
+
+    div.action {
+        cursor: pointer;
+        font-weight: 600;
+        
+        &:hover{
+            color: ${({ theme }) => theme.primary};
+        }
+
+        svg{
+            font-size: 25px;
+        }
+    }
+    
 
     ul {
         display: flex;
@@ -17,12 +51,35 @@ export const StyHeader = styled.header`
         justify-content: center;
         
         li {
-            list-style: none;
+            padding: 5px 20px;
 
             a {
                 height: 100%;
                 width: 100%;
-                padding: 5px 20px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    opacity: 0;
+                    right: -18px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    transform: rotate(0deg);
+                    transition: 0.5s;
+                    position: absolute;
+                    pointer-events: none;
+                    background-color: ${({ theme }) => theme.primary};
+                }
+
+                &.active{
+                    &::after{
+                        transform: rotate(45deg);
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
@@ -38,10 +95,20 @@ export const StySideElement = styled.div`
     padding: 0px;
     bottom: 0;
     width: 60px;
-    max-height: 70vh;
+    max-height: 60vh;
+    z-index: 2;
+
+    .scrolling-obj {
+        fill: ${({ theme }) => theme.text};
+        position: absolute;
+        top: -80px;
+        height: 60px;
+        width: 60px;
+        transition: transform 2s ease-in-out;
+    }
 
     a:hover {
-        color: ${({ theme }) => theme.primary}
+        color: ${({ theme }) => theme.primary};
     }
 
     &.left{
@@ -69,16 +136,33 @@ export const StySideElement = styled.div`
             letter-spacing: 0.1em;
             -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;
+            font-weight: 300;
+            letter-spacing: 4px;
         }
     }
+
+    @media ${devices.tablet} {
+        &.left {
+            left: 30px;
+        }
+
+        &.right {
+            right: 30px;
+        }
+    }
+
+    @media ${devices.tabletS} {
+        display: none;
+    }
+
 
     &::after{
         content: "";
         display: block;
         width: 1px;
-        height: 120px;
+        min-height: 80px;
         margin: 0px auto;
-        background: ${({ theme }) => theme.text};
+        background: ${({ theme }) => theme.text}80;
     }
     &::before{
         content: "";
@@ -86,14 +170,31 @@ export const StySideElement = styled.div`
         width: 1px;
         height: 100vh;
         margin: 0px auto;
-        background: ${({ theme }) => theme.text};
+        background: ${({ theme }) => theme.text}80;
     }
 `;
 
 export const StyMain = styled.main`
-    padding: 80px 200px;
-    margin: 0px auto;
+    padding: 0 200px;
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
+    position: absolute;
+    top: 70px;
+    left: 0; 
+    right: 0;
+    margin: 0px auto;
+    z-index: 0;
+
+    @media ${devices.laptopL} {
+        padding: 0 130px;
+    }
+
+    @media ${devices.tabletS} {
+        padding: 0 50px;
+    }
+
+    @media ${devices.mobileL} {
+        padding: 0 30px;
+    }
 `;

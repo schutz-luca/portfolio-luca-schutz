@@ -1,39 +1,45 @@
 import Link from 'next/link';
-import { useState } from 'react';
-import { Logo } from '@/components/logo';
-import { ThemeButton } from '@/templates/theme-button';
+import { FC } from 'react';
+import { Logo } from '@/src/components/logo';
+import { SideMenu } from '@/src/components/motion/side-menu';
+import { ThemeButton } from '@/src/templates/theme-button';
 import { StyHeader } from './styles';
-import { HeaderItemType } from './types';
+import { HeaderProps } from './types';
 
-export const Header = () => {
-    const headerItems: HeaderItemType[] = [
-        { href: '/', text: 'home' },
-        { href: '/#about', text: 'about' },
-        { href: '/#experience', text: 'experience' },
-        { href: '/#contact', text: 'contact' }
-    ];
-    const [active, setActive] = useState(headerItems[0]);
-    const handleActive = (item: HeaderItemType) => setActive(item);
+export const Header: FC<HeaderProps> = ({ active, setActive, headerItems, isMainPage }) => {
+
+    const handleActive = (index: number) => setActive(index);
 
     return (
         <StyHeader>
-            <Logo />
-            <ul>
-                {headerItems.map(item => (
-                    <li key={item.href}>
-                        <Link
-                            onClick={() => handleActive(item)}
-                            href={item.href}
-                            className={active.href === item.href ? 'active' : ''}
-                        >
-                            {item.text}
-                        </Link>
+            <Link href={'/'}>
+                <Logo />
+            </Link>
+            <ul className='topmenu'>
+                {headerItems.map((item, index) => (
+                    <li key={item.href} className={isMainPage ? 'not-main' : ''}>
+                        {!item.action ?
+                            <Link
+                                onClick={() => isMainPage && handleActive(index)}
+                                href={item.href}
+                                className={(isMainPage && active === index) ? 'active' : ''}
+                                scroll={false}
+                            >
+                                {item.text ?? item.element}
+                            </Link>
+                            :
+                            <div className='action' onClick={item.action}>
+                                {item.text ?? item.element}
+                            </div>
+                        }
+
                     </li>
                 ))}
                 <li>
                     <ThemeButton />
                 </li>
             </ul>
+            <SideMenu options={headerItems} />
         </StyHeader>
     );
 };
