@@ -59,7 +59,7 @@ export const TodoTemplate = ({ loadedTasks, user, logged }: TodoTemplateProps) =
                 <>
                     <h2 className='greetings'>
                         hey <b>{friendlyName}</b>, <br />
-                        <small>Welcome back to <b className='effect'>Schutzeverse</b> ToDo List 📑</small>
+                        <small>Welcome back to <b className='effect'>Schutzverse</b> ToDo List 📑</small>
                     </h2>
                     <p>Always many things to do, right? 🤯 Relax, we are going to help you...</p>
                     <div className='container'>
@@ -86,7 +86,7 @@ export const TodoTemplate = ({ loadedTasks, user, logged }: TodoTemplateProps) =
                 :
                 <>
                     <h2 className='greetings'>
-                        Welcome to <b>Schutzeverse</b> ToDo List 📑
+                        Welcome to <b>Schutzverse</b> ToDo List 📑
                     </h2>
                     <p>This is a place for you to feel free to create your tasks and organize your routine!</p> <br />
                     <b className='persist-message'>All the tasks are associated to your account, when you come back they will still be here</b>
