@@ -35,7 +35,7 @@ export const MenuItem: FC<SideMenuItemProps> = ({ option, onClick }) => {
   const handleClick = () => {
     if (onClick) onClick();
     if (option.action) option.action();
-  }
+  };
   return (
     <MotionItem>
       <Link
@@ -47,4 +47,4 @@ export const MenuItem: FC<SideMenuItemProps> = ({ option, onClick }) => {
       </Link>
     </MotionItem>
   );
-}
+};
