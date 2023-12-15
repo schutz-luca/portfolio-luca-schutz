@@ -8,5 +8,5 @@ export const devices = {
   laptopL: '(max-width: 1280px)',
   desktop: '(max-width: 1360px)',
   desktopL: '(max-width: 1600px)',
-  heightBreak: '(max-height: 970px)',
+  heightBreak: '(max-height: 900px)',
 };

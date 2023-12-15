@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Logo } from '../logo';
 import { StyLoading } from './styles';
 import { LoadingProps } from './types';
-import { Logo } from '../logo';
 
 export const Loading = ({ visible }: LoadingProps) => {
     const [hide, setHide] = useState(false);
@@ -36,10 +36,7 @@ export const Loading = ({ visible }: LoadingProps) => {
                                 transition={{ delay: 0.5 }}
                                 exit={{ opacity: 0 }}
                             >
-                                <Logo loadingPage/>
-                                <p>
-                                    Welcome to <b>Schutz</b>verse...
-                                </p>
+                                <Logo loadingPage />
                             </motion.div>
                         </StyLoading>
                     }

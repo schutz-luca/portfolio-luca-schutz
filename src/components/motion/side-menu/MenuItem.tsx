@@ -31,14 +31,20 @@ export const MotionItem: FC<IParent> = ({ children }) => (
   </motion.li>
 );
 
-export const MenuItem: FC<SideMenuItemProps> = ({ option, onClick }) => (
-  <MotionItem>
-    <Link
-      onClick={() => onClick && onClick()}
-      href={option.href}
-      scroll={false}
-    >
-      {option.text}
-    </Link>
-  </MotionItem>
-);
+export const MenuItem: FC<SideMenuItemProps> = ({ option, onClick }) => {
+  const handleClick = () => {
+    if (onClick) onClick();
+    if (option.action) option.action();
+  }
+  return (
+    <MotionItem>
+      <Link
+        onClick={handleClick}
+        href={option.href}
+        scroll={false}
+      >
+        {option.text ?? option.element}
+      </Link>
+    </MotionItem>
+  );
+}

@@ -95,7 +95,7 @@ export const StyHome = styled.div`
             transition: ${({ theme }) => theme.transition};
             position: absolute;
             left: -5rem;
-            top: -2rem;
+            top: -1rem;
             z-index: -1;
             height: 60%;
             

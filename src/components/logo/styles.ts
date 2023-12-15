@@ -1,3 +1,4 @@
+import { devices } from '@/src/styles/devices';
 import styled from 'styled-components';
 
 export const StyLogo = styled.div`
@@ -9,7 +10,7 @@ export const StyLogo = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 200;
     position: relative;
 
@@ -17,8 +18,38 @@ export const StyLogo = styled.div`
         font-size: 200px;
         margin: 20px;
 
+        @media ${devices.tabletS}{
+            font-size: 140px;
+        }
+        @media ${devices.mobileL}{
+            font-size: 100px;
+        }
+
         .react-icon{
             padding: 80px;
+        }
+
+        p.welcome{
+            &.hide {
+                opacity: 1;
+            }
+        }
+    }
+
+    p.welcome{
+        font-size: 30px;
+        position: absolute;
+        bottom: 28%;
+        padding: 5px 15px;
+        font-weight: 200;
+        font-style: italic;
+        transition: opacity ease-out 1.4s;
+        opacity: 0;
+
+        font-size: 20px;
+        @media ${devices.mobileL}{
+            font-size: 16px;
+            bottom: 35%;
         }
     }
 
@@ -27,7 +58,6 @@ export const StyLogo = styled.div`
         height: 98%;
         width: 98%;
         padding: 5px;
-        /* background: ${({ theme }) => theme.background}; */
         border-radius: 50%;
         transition: opacity ease-out 1.4s;
 

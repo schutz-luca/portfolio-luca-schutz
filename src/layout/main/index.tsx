@@ -8,7 +8,7 @@ import { CircleText } from '@/src/components/circle-text';
 import { Loading } from '@/src/components/loading';
 import { AppManagerContext } from '@/src/context/app-manager';
 import GlobalStyle from '@/src/styles/globals';
-import { Header } from './Header';
+import { Header } from './header';
 import { StyMain, StySideElement } from './styles';
 import { MainLayoutProps } from './types';
 

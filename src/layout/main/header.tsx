@@ -12,7 +12,9 @@ export const Header: FC<HeaderProps> = ({ active, setActive, headerItems, isMain
 
     return (
         <StyHeader>
-            <Logo />
+            <Link href={'/'}>
+                <Logo />
+            </Link>
             <ul className='topmenu'>
                 {headerItems.map((item, index) => (
                     <li key={item.href} className={isMainPage ? 'not-main' : ''}>

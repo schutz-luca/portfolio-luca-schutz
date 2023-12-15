@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { devices } from '@/src/styles/devices';
+import { StyLogo } from '../logo/styles';
 
 export const StyLoading = styled(motion.div)`
     position: fixed;
@@ -21,18 +23,17 @@ export const StyLoading = styled(motion.div)`
     }
 
     svg {
-        /* transform: translate(-50%, -50%); */
-        margin-bottom: 40px;
         height: 150px;
         width: 150px;
     }
 
-    p {   
-        position: absolute;
-        bottom: 15px;
-        background: ${({ theme }) => theme.background};
-        padding: 5px 15px;
-        font-weight: 200;
-        font-style: italic;
+    ${StyLogo}{
+        width: 80%;
+        height: 80%;
+
+        .react-icon{
+            padding: 30px;
+            margin-bottom: 0;
+        }
     }
 `;

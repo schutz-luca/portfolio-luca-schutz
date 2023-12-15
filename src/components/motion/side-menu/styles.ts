@@ -110,6 +110,7 @@ export const StySideMenu = styled(motion.nav)`
         }
 
         a {
+            display: flex;
             color: ${({ theme }) => theme.colors.white};
             font-size: 1.5rem;
 

@@ -4,7 +4,7 @@ import { StyLogo } from './styles';
 import { LogoProps } from './types';
 
 export const Logo: FC<LogoProps> = ({ loadingPage }) => {
-    const [hideHandler, setHideHandler] = useState(false);
+    const [hideHandler, setHideHandler] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,6 +17,9 @@ export const Logo: FC<LogoProps> = ({ loadingPage }) => {
         <StyLogo className={loadingPage ? 'loading-page' : ''}>
             <FaReact className={`react-icon${hideHandler ? ' hide' : ''}`} />
             <text className={`${hideHandler ? 'hide' : ''}`}>LSTZ</text>
+            <p className={`${hideHandler ? 'hide' : ''} welcome`}>
+                Welcome to <b>Schutz</b>verse ⚛️
+            </p>
         </StyLogo >
     );
 };

@@ -10,7 +10,8 @@ const HomePage = () => (
             { href: '/#home', text: 'home' },
             { href: '/#about', text: 'about' },
             // { href: '/#experience', text: 'experience' },
-            { href: '/#contact', text: 'contact' }
+            { href: '/#contact', text: 'contact' },
+            { href: '/todo', text: 'todo list' }
         ]}
         isMainPage
     >
