@@ -150,6 +150,10 @@ export default createGlobalStyle`
       }
   }
 
+  svg{
+    transition: ${({ theme }) => theme.transition};
+  }
+
   a, li {
     margin-bottom: 0;
     transition: ${({ theme }) => theme.transition};
