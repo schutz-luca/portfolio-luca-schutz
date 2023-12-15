@@ -3,7 +3,7 @@ import { devices } from '@/src/styles/devices';
 
 export const StyHeader = styled.header`
     position: fixed;
-    /* height: 70px; */
+    height: 70px;
     width: 100%;
     top: 0;
     display: flex;
@@ -28,6 +28,19 @@ export const StyHeader = styled.header`
         }
         .sidemenu {
             display: block;
+        }
+    }
+
+    div.action {
+        cursor: pointer;
+        font-weight: 600;
+        
+        &:hover{
+            color: ${({ theme }) => theme.primary};
+        }
+
+        svg{
+            font-size: 25px;
         }
     }
     

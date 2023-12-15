@@ -6,29 +6,31 @@ import { ThemeButton } from '@/src/templates/theme-button';
 import { StyHeader } from './styles';
 import { HeaderProps } from './types';
 
-export const Header: FC<HeaderProps> = ({ active, setActive, headerItems }) => {
+export const Header: FC<HeaderProps> = ({ active, setActive, headerItems, isMainPage }) => {
 
-    const handleActive = (index: number, action?: () => void) => {
-        if (action)
-            action();
-
-        setActive(index);
-    }
+    const handleActive = (index: number) => setActive(index)
 
     return (
         <StyHeader>
             <Logo />
             <ul className='topmenu'>
                 {headerItems.map((item, index) => (
-                    <li key={item.href}>
-                        <Link
-                            onClick={() => handleActive(index, item.action)}
-                            href={item.href || ''}
-                            className={active === index ? 'active' : ''}
-                            scroll={false}
-                        >
-                            {item.text}
-                        </Link>
+                    <li key={item.href} className={isMainPage ? 'not-main' : ''}>
+                        {!item.action ?
+                            <Link
+                                onClick={() => isMainPage && handleActive(index)}
+                                href={item.href}
+                                className={(isMainPage && active === index) ? 'active' : ''}
+                                scroll={false}
+                            >
+                                {item.text ?? item.element}
+                            </Link>
+                            :
+                            <div className='action' onClick={item.action}>
+                                {item.text ?? item.element}
+                            </div>
+                        }
+
                     </li>
                 ))}
                 <li>

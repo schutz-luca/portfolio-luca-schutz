@@ -12,7 +12,7 @@ import { Header } from './Header';
 import { StyMain, StySideElement } from './styles';
 import { MainLayoutProps } from './types';
 
-export const MainLayout = ({ children, headerItems }: MainLayoutProps) => {
+export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProps) => {
     const [loading, setLoading] = useState(true);
     const [sections, setSections] = useState<HTMLElement[]>([]);
     const [activeSection, setActiveSection] = useState<number>(0);
@@ -138,7 +138,7 @@ export const MainLayout = ({ children, headerItems }: MainLayoutProps) => {
         const section = window.location.href.split('#')[1];
         const index = sectionToIndex(section);
 
-        if (index !== -1 && index !== undefined)
+        if (isMainPage && index !== -1 && index !== undefined)
             setActiveSection(index);
 
         // eslint-disable-next-line
@@ -149,11 +149,15 @@ export const MainLayout = ({ children, headerItems }: MainLayoutProps) => {
         document.removeEventListener('mousewheel', handleMouseWheel);
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('keyup', handleKeyUp);
+
+        if (!isMainPage)
+            return
+
         document.addEventListener('mousewheel', handleMouseWheel, { passive: false });
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
 
-    }, [handleMouseWheel, handleKeyDown, handleKeyUp, waitScroll, activeSection]);
+    }, [handleMouseWheel, handleKeyDown, handleKeyUp, waitScroll, activeSection, isMainPage]);
 
     // Create an HTMLElement array with children elements
     useEffect(() => {
@@ -171,7 +175,7 @@ export const MainLayout = ({ children, headerItems }: MainLayoutProps) => {
     return (
         <ThemeProvider theme={theme}>
             <Loading visible={loading} />
-            <Header active={activeSection} setActive={setActiveSection} headerItems={headerItems} />
+            <Header active={activeSection} setActive={setActiveSection} headerItems={headerItems} isMainPage={isMainPage}/>
             <StySideElement className="left">
                 <ul>
                     <li>
