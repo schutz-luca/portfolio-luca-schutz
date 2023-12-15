@@ -28,7 +28,7 @@ export const MenuList: FC<SideMenuProps> = ({ options, isOpen, toggleOpen }) => 
   return (
     <motion.ul variants={variants}>
       <MotionItem>
-        <div className="theme-item">
+        <div className='theme-item'>
           <ThemeButton />
         </div>
       </MotionItem>

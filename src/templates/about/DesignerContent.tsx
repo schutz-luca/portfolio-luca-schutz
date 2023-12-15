@@ -11,17 +11,17 @@ export const DesignerContent = () => (
         </p>
         <div className='skills'>
             <h4>Specialist</h4>
-            <div className="flex">
-                <Bubble text="Adobe Photoshop" />
-                <Bubble text="Figma" color="orange" />
-                <Bubble text="Adobe Premiere" color="purple" />
+            <div className='flex'>
+                <Bubble text='Adobe Photoshop' />
+                <Bubble text='Figma' color='orange' />
+                <Bubble text='Adobe Premiere' color='purple' />
             </div>
-            <div className="divisor" />
+            <div className='divisor' />
             <h4>Experient</h4>
-            <div className="flex">
-                <Bubble text="Adobe Illustrator" />
-                <Bubble text="Adobe After Effects" color="purple" />
-                <Bubble text="Paint Tool Sai 2" />
+            <div className='flex'>
+                <Bubble text='Adobe Illustrator' />
+                <Bubble text='Adobe After Effects' color='purple' />
+                <Bubble text='Paint Tool Sai 2' />
             </div>
         </div>
     </>

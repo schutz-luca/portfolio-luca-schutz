@@ -151,7 +151,7 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         document.removeEventListener('keyup', handleKeyUp);
 
         if (!isMainPage)
-            return
+            return;
 
         document.addEventListener('mousewheel', handleMouseWheel, { passive: false });
         document.addEventListener('keydown', handleKeyDown);
@@ -176,26 +176,26 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         <ThemeProvider theme={theme}>
             <Loading visible={loading} />
             <Header active={activeSection} setActive={setActiveSection} headerItems={headerItems} isMainPage={isMainPage}/>
-            <StySideElement className="left">
+            <StySideElement className='left'>
                 <ul>
                     <li>
-                        <Link href='https://www.behance.net/schutz_luca' target="_blank">
+                        <Link href='https://www.behance.net/schutz_luca' target='_blank'>
                             <AiOutlineBehance />
                         </Link>
                     </li>
                     <li>
-                        <Link href='https://www.linkedin.com/in/luca-schutzenhofer/' target="_blank">
+                        <Link href='https://www.linkedin.com/in/luca-schutzenhofer/' target='_blank'>
                             <AiOutlineLinkedin />
                         </Link>
                     </li>
                     <li>
-                        <Link href='https://github.com/schutz-luca' target="_blank">
+                        <Link href='https://github.com/schutz-luca' target='_blank'>
                             <AiOutlineGithub />
                         </Link>
                     </li>
                 </ul>
             </StySideElement>
-            <StySideElement className="right">
+            <StySideElement className='right'>
                 <CircleText
                     text='LSLSLSLSLSLSLSLSLSLSLSLSLSLS'
                     className='scrolling-obj'
@@ -208,8 +208,8 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
             <StyMain ref={mainRef}>
                 {!loading && children}
             </StyMain>
-            <motion.div className="progress" style={{ scaleX }} />
-            <motion.div className="progress bottom" style={{ scaleX }} />
+            <motion.div className='progress' style={{ scaleX }} />
+            <motion.div className='progress bottom' style={{ scaleX }} />
             <GlobalStyle />
         </ThemeProvider>
     );

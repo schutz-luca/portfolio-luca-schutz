@@ -1,12 +1,12 @@
-import { User, Task } from "@prisma/client";
-import React from "react";
-import { GetServerSideProps } from "next";
-import { getSession, signOut } from "next-auth/react";
-import { MdLogout } from "react-icons/md";
-import prisma from '@/lib/prisma'
-import { Avatar } from "../components/avatar";
-import { MainLayout } from "../layout/main";
-import { TodoTemplate } from "../templates/todo";
+import { User, Task } from '@prisma/client';
+import React from 'react';
+import { GetServerSideProps } from 'next';
+import { getSession, signOut } from 'next-auth/react';
+import { MdLogout } from 'react-icons/md';
+import prisma from '@/lib/prisma';
+import { Avatar } from '../components/avatar';
+import { MainLayout } from '../layout/main';
+import { TodoTemplate } from '../templates/todo';
 
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     if (!session || !session?.user?.email)
         return {
             props: {}
-        }
+        };
 
     const tasks = await prisma.task.findMany({
         where: {
@@ -55,7 +55,7 @@ const Todo: React.FC<Props> = (props) => {
                             element:
                                 <div className='flex centralize'>
                                     <MdLogout style={{marginRight: 12}}/>
-                                    <Avatar src={user?.image || ''} size="40px" />
+                                    <Avatar src={user?.image || ''} size={40} />
                                 </div>, action: () => signOut(), href: ''
                         } :
                         { text: 'login', href: '/api/auth/signin' }

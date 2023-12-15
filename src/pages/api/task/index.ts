@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import prisma from '@/lib/prisma'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import prisma from '@/lib/prisma';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../auth/[...nextauth]';
 
@@ -9,7 +9,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
 
     const session = await getServerSession(req, res, authOptions);
     if (!session?.user?.email) {
-      res.status(401).send({ message: 'Unauthorized' })
+      res.status(401).send({ message: 'Unauthorized' });
       return;
     }
 
@@ -35,12 +35,12 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
               select: { name: true },
             },
           },
-        })
+        });
         res.json(tasks);
       }
   }
   catch (error: any) {
-    console.error(error)
-    res.status(500).send({ message: error.message })
+    console.error(error);
+    res.status(500).send({ message: error.message });
   }
 }

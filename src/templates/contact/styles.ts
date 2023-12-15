@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyContact = styled.div`
     position: relative;
@@ -31,4 +31,4 @@ export const StyContact = styled.div`
             color: ${({ theme }) => theme.primary};
         }
     }
-`
+`;

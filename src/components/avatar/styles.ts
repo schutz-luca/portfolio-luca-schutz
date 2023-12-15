@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const $AvatarContainer = styled.div`
     display: flex;
@@ -21,4 +21,4 @@ export const $AvatarContainer = styled.div`
         object-fit: cover;
         object-position: center;
     }
-`
+`;

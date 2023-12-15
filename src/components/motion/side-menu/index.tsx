@@ -40,7 +40,7 @@ export const SideMenu: FC<SideMenuProps> = ({ options }) => {
       className={`sidemenu ${isOpen ? 'open' : 'closed'}`}
     >
       <MenuToggle toggle={() => toggleOpen()} />
-      <motion.div className="background" variants={sidebar} />
+      <motion.div className='background' variants={sidebar} />
       <MenuList options={options} isOpen={isOpen} toggleOpen={toggleOpen} />
     </StySideMenu>
   );

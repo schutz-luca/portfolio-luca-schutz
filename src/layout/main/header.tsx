@@ -8,7 +8,7 @@ import { HeaderProps } from './types';
 
 export const Header: FC<HeaderProps> = ({ active, setActive, headerItems, isMainPage }) => {
 
-    const handleActive = (index: number) => setActive(index)
+    const handleActive = (index: number) => setActive(index);
 
     return (
         <StyHeader>

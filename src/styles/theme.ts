@@ -58,7 +58,7 @@ const effects = {
     box-shadow: 0 8px 50px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);`
-}
+};
 
 const theme = {
   colors,

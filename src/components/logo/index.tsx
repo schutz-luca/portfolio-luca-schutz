@@ -19,4 +19,4 @@ export const Logo: FC<LogoProps> = ({ loadingPage }) => {
             <text className={`${hideHandler ? 'hide' : ''}`}>LSTZ</text>
         </StyLogo >
     );
-}
+};

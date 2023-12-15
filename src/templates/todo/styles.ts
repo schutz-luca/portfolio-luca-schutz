@@ -1,5 +1,5 @@
-import { devices } from "@/src/styles/devices";
-import styled from "styled-components";
+import { devices } from '@/src/styles/devices';
+import styled from 'styled-components';
 
 export const StyTodo = styled.div`
     margin-top: 30px;
@@ -100,7 +100,7 @@ export const StyTodo = styled.div`
             width: 100%;
         }
     }
-`
+`;
 
 export const TaskList = styled.ul`
     margin: 40px 0;
@@ -130,4 +130,4 @@ export const TaskList = styled.ul`
             justify-content: center;
         }
     }
-`
+`;

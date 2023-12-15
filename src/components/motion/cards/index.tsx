@@ -27,7 +27,7 @@ export const Cards: FC<CardsProps> = ({ cards, onSelect, onClose }) => {
           <CardView card={selectedCard} closeView={closeView} />
         }
       </AnimatePresence>
-      <ul className="card-list">
+      <ul className='card-list'>
         {cards.map(card => (
           <li
             className={'card'}

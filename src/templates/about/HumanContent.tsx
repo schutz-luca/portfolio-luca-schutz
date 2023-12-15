@@ -9,25 +9,25 @@ export const HumanContent = () => (
         </p>
         <div className='skills'>
             <h4>Soft Skills</h4>
-            <div className="flex">
-                <Bubble text="Nonviolent Communication" />
-                <Bubble text="Critical Thinking" color="purple" />
-                <Bubble text="Creativity" color="purple" />
-                <Bubble text="Emotional Intelligence" color="purple" />
-                <Bubble text="People Management" />
-                <Bubble text="Self Teached" />
+            <div className='flex'>
+                <Bubble text='Nonviolent Communication' />
+                <Bubble text='Critical Thinking' color='purple' />
+                <Bubble text='Creativity' color='purple' />
+                <Bubble text='Emotional Intelligence' color='purple' />
+                <Bubble text='People Management' />
+                <Bubble text='Self Teached' />
             </div>
-            <div className="divisor" />
+            <div className='divisor' />
             <h4>Subjects I am interested in</h4>
-            <div className="flex">
-                <Bubble text="Music Production" color="orange" />
-                <Bubble text="Guitars" color="orange" />
-                <Bubble text="Psychoanalysis" color="purple" />
-                <Bubble text="Carl Jung" color="purple" />
-                <Bubble text="Existentialism" color="purple" />
-                <Bubble text="Stoicism" color="purple" />
-                <Bubble text="Quantum Mechanics" />
-                <Bubble text="Astronomy" />
+            <div className='flex'>
+                <Bubble text='Music Production' color='orange' />
+                <Bubble text='Guitars' color='orange' />
+                <Bubble text='Psychoanalysis' color='purple' />
+                <Bubble text='Carl Jung' color='purple' />
+                <Bubble text='Existentialism' color='purple' />
+                <Bubble text='Stoicism' color='purple' />
+                <Bubble text='Quantum Mechanics' />
+                <Bubble text='Astronomy' />
             </div>
         </div>
     </>

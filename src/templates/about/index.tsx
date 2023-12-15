@@ -45,7 +45,7 @@ export const About = () => {
     const onClose = () => setDisableScroll(false);
 
     return (
-        <AnimatedSection id="about">
+        <AnimatedSection id='about'>
             <h2>what am I good at?</h2>
             <Cards cards={cards} onSelect={onSelect} onClose={onClose} />
         </AnimatedSection>
