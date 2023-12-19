@@ -68,6 +68,10 @@ export const StyTodo = styled.div`
         padding: 10px 30px;
         margin-bottom: 100px;
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+
+        &[disabled]{
+            color: #ffffff90;
+        }
     }
     button{
         color: ${({ theme }) => theme.text};
