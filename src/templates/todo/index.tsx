@@ -31,7 +31,7 @@ export const TodoTemplate = ({ loadedTasks, user, logged }: TodoTemplateProps) =
             setTasks(tasks.concat(taskAdded));
 
             setTitle('');
-            setLoading(false)
+            setLoading(false);
         } catch (error) {
             console.error(error);
         }
@@ -64,7 +64,7 @@ export const TodoTemplate = ({ loadedTasks, user, logged }: TodoTemplateProps) =
         if (!loading && inputRef.current)
             inputRef.current.focus();
 
-    }, [loading, inputRef?.current])
+    }, [loading, inputRef?.current]);
 
     return (
         <StyTodo>
