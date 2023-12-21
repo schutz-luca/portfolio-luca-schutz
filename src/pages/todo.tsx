@@ -1,7 +1,7 @@
 import { User, Task } from '@prisma/client';
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import { getSession, signOut } from 'next-auth/react';
+import { getSession, signIn, signOut } from 'next-auth/react';
 import { MdLogout } from 'react-icons/md';
 import prisma from '@/lib/prisma';
 import { Avatar } from '../components/avatar';
@@ -54,11 +54,17 @@ const Todo: React.FC<Props> = (props) => {
                         {
                             element:
                                 <div className='flex centralize'>
-                                    <MdLogout style={{marginRight: 12}}/>
+                                    <MdLogout style={{ marginRight: 12 }} />
                                     <Avatar src={user?.image || ''} size={40} />
-                                </div>, action: () => signOut(), href: ''
+                                </div>,
+                            action: () => signOut(),
+                            href: ''
                         } :
-                        { text: 'login', href: '/api/auth/signin' }
+                        {
+                            text: 'login',
+                            action: () => signIn(),
+                            href: ''
+                        }
                 ]
             }
         >
