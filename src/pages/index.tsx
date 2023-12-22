@@ -7,10 +7,10 @@ import { Contact } from '../templates/contact';
 const HomePage = () => (
     <MainLayout
         headerItems={[
-            { href: '/#home', text: 'home' },
-            { href: '/#about', text: 'about' },
+            { href: '/', text: 'home' },
+            { href: '/', text: 'about' },
             // { href: '/#experience', text: 'experience' },
-            { href: '/#contact', text: 'contact' },
+            { href: '/', text: 'contact' },
             { href: '/todo', text: 'todo list' }
         ]}
         isMainPage

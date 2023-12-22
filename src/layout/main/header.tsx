@@ -17,7 +17,7 @@ export const Header: FC<HeaderProps> = ({ active, setActive, headerItems, isMain
             </Link>
             <ul className='topmenu'>
                 {headerItems.map((item, index) => (
-                    <li key={item.href} className={isMainPage ? 'not-main' : ''}>
+                    <li key={`${item.text}#${index}`} className={isMainPage ? 'not-main' : ''}>
                         {!item.action ?
                             <Link
                                 onClick={() => isMainPage && handleActive(index)}
@@ -39,7 +39,7 @@ export const Header: FC<HeaderProps> = ({ active, setActive, headerItems, isMain
                     <ThemeButton />
                 </li>
             </ul>
-            <SideMenu options={headerItems} />
+            <SideMenu options={headerItems} handleActive={handleActive}/>
         </StyHeader>
     );
 };

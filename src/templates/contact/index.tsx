@@ -4,7 +4,7 @@ import { StyContact } from './styles';
 
 export const Contact = () => {
     return (
-        <AnimatedSection id='about'>
+        <AnimatedSection id='contact'>
             <StyContact>
                 <h2>let&apos;s get in touch!</h2>
                 <p>

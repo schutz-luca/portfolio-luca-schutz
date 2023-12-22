@@ -50,6 +50,7 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         setWaitScroll(true);
     }, [waitScroll, activeSection, sections]);
 
+
     const handleMouseWheel = useCallback((event: any) => {
         event.preventDefault();
         event.stopPropagation();
@@ -64,15 +65,7 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     }, [isKeyUp]);
 
     const handleKeyDown = useCallback((event: any) => {
-        const downwardKeys = [
-            'Down',
-            ' ',
-            'Spacebar',
-            'ArrowDown',
-            'Right',
-            'PageDown',
-            'ArrowRight',
-        ];
+        const downwardKeys = ['Down', ' ', 'Spacebar', 'ArrowDown', 'Right', 'PageDown', 'ArrowRight'];
         const upwardKeys = ['Up', 'ArrowUp', 'Left', 'PageUp', 'ArrowLeft'];
 
         // Prevent running multiple events in keydown
@@ -83,7 +76,6 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
                 event.preventDefault();
             return;
         }
-
 
         if (downwardKeys.includes(event.key)) {
             event.preventDefault();
@@ -98,7 +90,7 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
             event.preventDefault();
             goToLastSection();
         }
-    }, [changeSection, isKeyUp, goToLastSection, goToFirstSection]);
+    }, [isKeyUp, changeSection, goToFirstSection, goToLastSection]);
 
     const sectionToIndex = (selectedSection: string) => {
         const sectionsId = sections.map(section => section.id);
@@ -108,11 +100,12 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     // Scroll to selected section whener active session changes
     useEffect(() => {
         const currentSection = sections ? sections[activeSection] : undefined;
+
         if (currentSection) {
             scrollTo(currentSection.offsetTop);
         }
         // eslint-disable-next-line
-    }, [activeSection]);
+    }, [activeSection, sections]);
 
     // Loading interval
     useEffect(() => {
@@ -146,10 +139,6 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
 
     // Handle with listeners
     useEffect(() => {
-        document.removeEventListener('mousewheel', handleMouseWheel);
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('keyup', handleKeyUp);
-
         if (!isMainPage)
             return;
 
@@ -157,7 +146,13 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
 
-    }, [handleMouseWheel, handleKeyDown, handleKeyUp, waitScroll, activeSection, isMainPage]);
+        return () => {
+            document.removeEventListener('mousewheel', handleMouseWheel);
+            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('keyup', handleKeyUp);
+        };
+
+    }, [waitScroll, activeSection, isMainPage, sections, handleMouseWheel, handleKeyDown, handleKeyUp]);
 
     // Create an HTMLElement array with children elements
     useEffect(() => {
@@ -175,7 +170,7 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     return (
         <ThemeProvider theme={theme}>
             <Loading visible={loading} />
-            <Header active={activeSection} setActive={setActiveSection} headerItems={headerItems} isMainPage={isMainPage}/>
+            <Header active={activeSection} setActive={setActiveSection} headerItems={headerItems} isMainPage={isMainPage} />
             <StySideElement className='left'>
                 <ul>
                     <li>

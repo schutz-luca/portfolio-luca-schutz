@@ -64,7 +64,7 @@ export const TodoTemplate = ({ loadedTasks, user, logged }: TodoTemplateProps) =
         if (!loading && inputRef.current)
             inputRef.current.focus();
 
-    }, [loading, inputRef?.current]);
+    }, [loading]);
 
     return (
         <StyTodo>

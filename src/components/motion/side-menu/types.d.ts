@@ -5,6 +5,7 @@ export interface SideMenuProps {
     options: HeaderItemType[];
     isOpen?: boolean;
     toggleOpen?: Cycle;
+    handleActive: (index: number) => any;
 }
 
 export interface SideMenuItemProps {

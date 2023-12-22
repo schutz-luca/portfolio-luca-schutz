@@ -157,7 +157,6 @@ export default createGlobalStyle`
   a, li {
     margin-bottom: 0;
     transition: ${({ theme }) => theme.transition};
-    padding: 5px 0;
 
     &:hover, &:focus{
       transform: translateY(-3px);

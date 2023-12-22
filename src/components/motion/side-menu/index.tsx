@@ -26,7 +26,7 @@ const sidebar = {
   }
 };
 
-export const SideMenu: FC<SideMenuProps> = ({ options }) => {
+export const SideMenu: FC<SideMenuProps> = ({ options, handleActive }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -41,7 +41,7 @@ export const SideMenu: FC<SideMenuProps> = ({ options }) => {
     >
       <MenuToggle toggle={() => toggleOpen()} />
       <motion.div className='background' variants={sidebar} />
-      <MenuList options={options} isOpen={isOpen} toggleOpen={toggleOpen} />
+      <MenuList options={options} isOpen={isOpen} toggleOpen={toggleOpen} handleActive={handleActive} />
     </StySideMenu>
   );
 };

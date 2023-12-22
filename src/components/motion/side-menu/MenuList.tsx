@@ -13,17 +13,13 @@ const variants = {
   }
 };
 
-export const MenuList: FC<SideMenuProps> = ({ options, isOpen, toggleOpen }) => {
-  const [hideOptions, setHideOptions] = useState(true);
+export const MenuList: FC<SideMenuProps> = ({ options, isOpen, toggleOpen, handleActive }) => {
+  const handleOnClick = (index) => {
+    if (toggleOpen)
+      toggleOpen();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHideOptions(!isOpen);
-    }, 500);
-    return () => clearInterval(interval);
-  }, [isOpen]);
-
-
+    handleActive(index);
+  };
 
   return (
     <motion.ul variants={variants}>
@@ -33,8 +29,8 @@ export const MenuList: FC<SideMenuProps> = ({ options, isOpen, toggleOpen }) => 
         </div>
       </MotionItem>
       {
-        options.map(option => (
-          <MenuItem option={option} key={option.href} onClick={toggleOpen} />
+        options.map((option, index) => (
+          <MenuItem option={option} key={`${option.text}#${index}`} onClick={() => handleOnClick(index)} />
         ))
       }
     </motion.ul >
