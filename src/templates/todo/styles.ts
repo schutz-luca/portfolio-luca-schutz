@@ -2,7 +2,7 @@ import { devices } from '@/src/styles/devices';
 import styled from 'styled-components';
 
 export const StyTodo = styled.div`
-    margin-top: 30px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
