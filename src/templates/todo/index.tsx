@@ -98,7 +98,7 @@ export const TodoTemplate = ({ loadedTasks, user, logged }: TodoTemplateProps) =
                                 placeholder='what do you need to do?'
                                 ref={inputRef}
                             />
-                            <button type='submit' style={{ display: 'none' }}
+                            <button disabled={!title} type='submit' style={{ display: 'none' }}
                             />
                         </form>
                     </div>
