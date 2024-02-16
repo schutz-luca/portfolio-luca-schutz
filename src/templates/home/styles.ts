@@ -81,14 +81,9 @@ export const StyHome = styled.div`
             height: 100%;
             max-height: 350px;
             max-width: 350px;
-            border-radius: 5px;
+            border-radius: 50%;
 
-            filter: grayscale(1);
             transition: ${({ theme }) => theme.transition};
-
-            &:hover{
-                filter: none;
-            }
         }
 
         .dots {
