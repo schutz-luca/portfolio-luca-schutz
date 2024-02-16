@@ -3,30 +3,34 @@ import styled from 'styled-components';
 export const StyContact = styled.div`
     position: relative;
     text-align: center;
-
-    ${({ theme }) => theme.effects.glass};
-    background-color: #00000010;
-
     padding: 30px 20px;
     border-radius: 10px;
 
-    svg{
-        height: 60px;
-        width: 60px;
-        color: ${({ theme }) => theme.colors.white}90;
+    .stripes{
+        position: absolute;
+        top: 0;
+        right: 70%;
+        z-index: -1;
+        height: 100%;
     }
 
-    h2 {
-        color: ${({ theme }) => theme.secondary}
+    .stacks{
+        margin-top: 60px;
     }
 
     p{
         font-size: 1.2rem;
         margin-top: 15px;
+        
+        div{
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 200;
+        }
     }
 
     a{
-        color: ${({ theme }) => theme.colors.orange};
+        color: ${({ theme }) => theme.colors.purple};
         &:hover{
             color: ${({ theme }) => theme.primary};
         }
