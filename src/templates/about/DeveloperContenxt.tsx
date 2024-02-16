@@ -4,7 +4,7 @@ export const DeveloperContent = () => (
     <>
         <p className='description'>
             I&apos;m a fullstack <b>JavaScript</b> developer, Frontend specialist.
-            I have already developed several types of applications, including <b>social networks</b> for the sale of content,
+            I have already developed several types of applications, including <b>social networks</b> for the content sale,
             improvements for a large company in the financial market, creation of applications for one of the largest audiovisual software companies, etc.
             <br />
             Unfortunately, most projects are private for commercial reasons.
@@ -14,6 +14,7 @@ export const DeveloperContent = () => (
             <div className='flex'>
                 <Bubble text='React.js' />
                 <Bubble text='Node.js' color='purple' />
+                <Bubble text='Express' color='purple' />
                 <Bubble text='Git' color='orange' />
                 <Bubble text='JavaScript' color='orange' />
                 <Bubble text='Typescript' color='orange' />

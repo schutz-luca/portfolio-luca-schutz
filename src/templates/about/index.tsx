@@ -23,7 +23,7 @@ export const About = () => {
         {
             id: '1',
             category: 'Designer',
-            title: 'Graphic & UI/UX',
+            title: 'Graphics & UI/UX',
             description: '// Figma // Photoshop // Illustrator // Premiere //',
             content: <DesignerContent />,
             image: DesignerImage.src
@@ -32,7 +32,7 @@ export const About = () => {
             id: '2',
             category: 'Human',
             title: 'Artist & lover of the Human Experience',
-            description: '// Multi Instrumentalist // Soft Skills //',
+            description: '// Subjects of Interest // Soft Skills //',
             content: <HumanContent />,
             image: HumanImage.src,
             imageCredit: { text: 'Art by Boris Pelcer', link: 'https://www.borispelcer.com/index' }

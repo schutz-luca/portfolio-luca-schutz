@@ -17,7 +17,7 @@ export const Home: FC = () => (
                         <b>Schutz</b>
                     </h1>
                     <h2><b>Frontend Expert</b> with amazing <b>Design Skills</b></h2>
-                    <p>I am many things, among them <b>Software Engineer</b>, Graphic Designer, independent music producer, multi-instrumentalist and a <b>lover of philosophy and the human experience</b>.</p>
+                    <p>I can be described as several things, among them <b>Software Engineer</b>, Graphic Designer, independent music producer, multi-instrumentalist and <b>enthusiast of philosophy and the human experience</b>.</p>
                 </div>
                 <div className='image-container'>
                     <Image src={profilePic} alt='Schutz Luca pic' className='image' />
