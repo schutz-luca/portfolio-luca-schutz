@@ -6,7 +6,7 @@ import { StySideMenu } from './styles';
 import { SideMenuProps } from './types';
 import { useDimensions } from './use-dimensions';
 
-const closedButtonPosition = 'calc(100% - 22px - 25px) 27px';
+const closedButtonPosition = 'calc(100% - 20px - 22px) 27px';
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at ${closedButtonPosition})`,
