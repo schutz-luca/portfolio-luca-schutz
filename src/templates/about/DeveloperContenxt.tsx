@@ -18,6 +18,7 @@ export const DeveloperContent = () => (
                 <Bubble text='JQuery' />
                 <Bubble text='Node.js' color='purple' />
                 <Bubble text='Express' color='purple' />
+                <Bubble text='Serverless' color='purple' />
                 <Bubble text='Git' color='orange' />
                 <Bubble text='JavaScript' color='orange' />
                 <Bubble text='Typescript' color='orange' />
