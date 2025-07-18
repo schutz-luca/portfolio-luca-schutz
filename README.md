@@ -1,38 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Portfolio: Schutzverse ⚛️</h1>
 
-## Getting Started
+This project is a showcase of my work and professional profile, putting into practice a refined design and modern technologies. Developed with **[Next.js](https://nextjs.org/)** and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-First, run the development server:
+## 🚀 Technical Features
+- Create and endpoints with **[Next API](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)**
+- Database managing with **[Prisma](https://www.prisma.io/)**
+- GitHub authentication with **[NextAuth](https://next-auth.js.org/)**
+- Styling with typescript files using **[Styled Components](https://styled-components.com/)**
+- Animated transitions with **[Framer Motion](https://motion.dev/)**
+- Centralized global states with **[Context API](https://react.dev/reference/react/createContext)**
+
+## 🛠️ Installation and Setup
+
+Follow the steps below to set up the project locally:
+
+### 1. Prerequisites
+Before starting, make sure you have the following installed/created:
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- [Git](https://git-scm.com/)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+To use ToDo List showcase:
+- [GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) credentials
+- A postgres DB instance URL
+
+### 2. Clone the repository
+Clone this repository to your local machine using:
+
+```bash
+git clone https://github.com/schutz-luca/portfolio-schutzverse.git
+```
+
+### 3. Navigate to the project folder
+Move into the project's directory:
+
+```bash
+cd portfolio-schutzverse
+```
+
+### 4. Install dependencies
+Install all required dependencies for the project.
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn
+```
+
+### 5. Create environment file
+Create a `.env` file in the root directory of the project and configure the required variables. Use the provided `.env.example` file as a reference:
+
+```bash
+cp .env.example .env
+```
+
+### 6. Start the Development Server
+Run the development server to start the application.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 📄 License
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The MIT License (MIT)
