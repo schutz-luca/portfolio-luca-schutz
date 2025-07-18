@@ -3,7 +3,7 @@
 This project is a showcase of my work and professional profile, putting into practice a refined design and modern technologies. Developed with **[Next.js](https://nextjs.org/)** and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## 🚀 Technical Features
-- Create and endpoints with **[Next API](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)**
+- Internal REST endpoints creation with **[Next API](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)**
 - Database managing with **[Prisma](https://www.prisma.io/)**
 - GitHub authentication with **[NextAuth](https://next-auth.js.org/)**
 - Styling with typescript files using **[Styled Components](https://styled-components.com/)**
