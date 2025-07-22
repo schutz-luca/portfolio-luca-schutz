@@ -1,6 +1,8 @@
 <h1 align="center">Portfolio: Schutzverse ⚛️</h1>
 
-This project is a showcase of my work and professional profile, putting into practice a refined design and modern technologies. Developed with **[Next.js](https://nextjs.org/)** and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is a showcase of my work and professional profile, putting into practice a refined design with modern technologies. Developed with **[Next.js](https://nextjs.org/)** and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Access the project running in production by clicking [here](https://portfolio-schutzverse.vercel.app/).
 
 ## 🚀 Technical Features
 - Internal REST endpoints creation with **[Next API](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)**
