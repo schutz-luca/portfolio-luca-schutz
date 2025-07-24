@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import { FC } from 'react';
 import { AnimatedSection } from '@/src/components/motion';
 import DotsSquareSVG from '@/public/assets/images/square-of-dots.svg';
 import profilePic from '@/public/assets/images/profile-pic.png';
 import { StyHome } from './styles';
 
-export const Home: FC = () => (
+export const Home = () => (
     <AnimatedSection id='home'>
         <StyHome>
             <div className='flex-row'>
