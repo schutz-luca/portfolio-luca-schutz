@@ -138,21 +138,21 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     }, [sections]);
 
     // Handle with listeners
-    useEffect(() => {
-        if (!isMainPage)
-            return;
+    // useEffect(() => {
+    //     if (!isMainPage)
+    //         return;
 
-        document.addEventListener('mousewheel', handleMouseWheel, { passive: false });
-        document.addEventListener('keydown', handleKeyDown);
-        document.addEventListener('keyup', handleKeyUp);
+    //     document.addEventListener('mousewheel', handleMouseWheel, { passive: false });
+    //     document.addEventListener('keydown', handleKeyDown);
+    //     document.addEventListener('keyup', handleKeyUp);
 
-        return () => {
-            document.removeEventListener('mousewheel', handleMouseWheel);
-            document.removeEventListener('keydown', handleKeyDown);
-            document.removeEventListener('keyup', handleKeyUp);
-        };
+    //     return () => {
+    //         document.removeEventListener('mousewheel', handleMouseWheel);
+    //         document.removeEventListener('keydown', handleKeyDown);
+    //         document.removeEventListener('keyup', handleKeyUp);
+    //     };
 
-    }, [waitScroll, activeSection, isMainPage, sections, handleMouseWheel, handleKeyDown, handleKeyUp]);
+    // }, [waitScroll, activeSection, isMainPage, sections, handleMouseWheel, handleKeyDown, handleKeyUp]);
 
     // Create an HTMLElement array with children elements
     useEffect(() => {

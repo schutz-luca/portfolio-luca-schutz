@@ -11,6 +11,7 @@ export const StyBubble = styled.span`
     cursor: default;
     transition: ${({ theme }) => theme.transition};
     white-space: nowrap;
+    display: inline-block;
 
     &.purple {
         border: solid 1px ${({ theme }) => theme.colors.purple};

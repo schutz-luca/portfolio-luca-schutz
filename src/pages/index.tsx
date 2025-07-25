@@ -3,13 +3,14 @@ import { MainLayout } from '@/src/layout/main';
 import { About } from '@/src/templates/about';
 import { Home } from '@/src/templates/home';
 import { Contact } from '../templates/contact';
+import { Projects } from '../templates/projects';
 
 const HomePage = () => (
     <MainLayout
         headerItems={[
             { href: '/', text: 'home' },
             { href: '/', text: 'about' },
-            // { href: '/#experience', text: 'experience' },
+            { href: '/', text: 'projects' },
             { href: '/', text: 'contact' },
             { href: '/todo', text: 'todo list' }
         ]}
@@ -17,6 +18,7 @@ const HomePage = () => (
     >
         <Home />
         <About />
+        <Projects />
         <Contact />
     </MainLayout>
 );
