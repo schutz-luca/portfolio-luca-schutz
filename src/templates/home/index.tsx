@@ -9,14 +9,20 @@ export const Home = () => (
         <StyHome>
             <div className='flex-row'>
                 <div className='text-container'>
-                    <p className='presenting'>hello buddy, my name is</p>
+                    <p className='presenting'>hey, my name is</p>
                     <h1>
                         <small>Luca</small>
-                        <br />
                         <b>Schutz</b>
                     </h1>
-                    <h2><b>Frontend Expert</b> with amazing <b>Design Skills</b></h2>
-                    <p>I can be described as several things, among them <b>Software Engineer</b>, Graphic Designer, independent music producer, multi-instrumentalist and <b>enthusiast of philosophy and the human experience</b>.</p>
+                    <h2><b>Front-end Expert</b> /// <b>Full-stack Engineer</b> /// <b>Tech Lead</b></h2>
+                    <p>
+                        <b>Software Architect</b> focused in <b>Creative Solutions</b>. Postgraduated in Software Architecture & Solutions, skilled across the full digital product lifecycle, from
+                        requirements to front-end and back-end development, CI/CD in the cloud, version control, and production release management.
+                    </p>
+                    <br />
+                    <p>
+                        In a time when machines are increasingly becoming more human-like, I strive to find ways to <b>create impactful experiences</b> and use technology not only to solve problems, <b>but to connect people</b>.
+                    </p>
                 </div>
                 <div className='image-container'>
                     <Image src={profilePic} alt='Schutz Luca pic' className='image' />

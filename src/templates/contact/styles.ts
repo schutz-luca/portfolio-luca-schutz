@@ -22,7 +22,7 @@ export const StyContact = styled.div`
         font-size: 1.2rem;
         margin-top: 15px;
         
-        div{
+        span{
             font-size: 1rem;
             margin-bottom: 20px;
             font-weight: 200;

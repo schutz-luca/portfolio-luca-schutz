@@ -10,11 +10,11 @@ export const Contact = () => {
             <StyContact>
                 <h2>let&apos;s get in touch 🎯</h2>
                 <p>
-                    <div>
+                    <span>
                         If my profile looks interesting to you, let&apos;s talk a little,
                         <br />
                         maybe we can do amazing things together!
-                    </div>
+                    </span>
 
                     Send me a message on
                     <Link href='https://www.linkedin.com/in/luca-schutzenhofer/' target='_blank'>{' LinkedIn '}</Link>

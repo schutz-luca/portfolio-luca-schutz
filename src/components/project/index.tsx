@@ -9,7 +9,7 @@ const techColors = {
     frontend: 'default',
     backend: 'purple',
     other: 'waterGreen'
-}
+};
 
 export const Project = ({
     title,
@@ -29,9 +29,8 @@ export const Project = ({
                     <h3>{title}</h3>
 
                 }
-                {texts.map(text => <p>{text}</p>)}
+                {texts.map(text => <p key={text}>{text}</p>)}
                 <div className='techs'>
-                    {/* {techs.map(tech => <Bubble key={tech.name} text={tech.name} />)} */}
                     {techs.map(tech => <Bubble key={tech.name} text={tech.name} color={techColors[tech.kind] as BubbleColors} />)}
                 </div>
             </div>

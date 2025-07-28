@@ -32,6 +32,7 @@ export const StyProject = styled.div`
 
         p {
             font-weight: 300;
+            margin: 8px 0;
         }
     }
 

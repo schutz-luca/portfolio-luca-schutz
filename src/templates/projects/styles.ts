@@ -19,15 +19,17 @@ export const StyProjects = styled.div`
         border-radius: 10px;
         font-weight: 300;
 
-        &, a{
+        
             color: ${({ theme }) => theme.colors.white};
-        }
+        
 
-        a {
+        
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 5px;
-        }
+            font-weight: 400;
+
+        
     }
 `;

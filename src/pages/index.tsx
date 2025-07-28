@@ -1,6 +1,6 @@
 import { AnimatedSection } from '@/src/components/motion';
 import { MainLayout } from '@/src/layout/main';
-import { About } from '@/src/templates/about';
+import { Skills } from '@/src/templates/skills';
 import { Home } from '@/src/templates/home';
 import { Contact } from '../templates/contact';
 import { Projects } from '../templates/projects';
@@ -9,14 +9,14 @@ const HomePage = () => (
     <MainLayout
         headerItems={[
             { href: '/', text: 'home' },
-            { href: '/', text: 'about' },
+            { href: '/', text: 'skills' },
             { href: '/', text: 'projects' },
             { href: '/', text: 'contact' },
         ]}
         isMainPage
     >
         <Home />
-        <About />
+        <Skills />
         <Projects />
         <Contact />
     </MainLayout>

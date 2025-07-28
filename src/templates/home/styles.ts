@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const StyHome = styled.div`
     .text-container {
-        margin-right: 100px;
+        margin-right: 130px;
 
         @media ${devices.laptopL} {
             margin: 0;
@@ -11,12 +11,10 @@ export const StyHome = styled.div`
     }
     p {
         font-weight: 200;
-        letter-spacing: 2px;
         line-height: 30px;
-        text-align: justify;
 
         b {
-            letter-spacing: 1px;
+            font-weight: 700;
         }
     }
 
@@ -29,26 +27,41 @@ export const StyHome = styled.div`
     h1 {
         font-weight: 400;
         line-height: 80px;
-        margin-top: 10px;
-        margin-bottom: 60px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
 
         @media ${devices.mobileL} {
             line-height: 50px;
         }
 
         b{
-            color: ${({ theme }) => theme.primary}
+            color: ${({ theme }) => theme.primary};
         }
     }
 
     h2 {
-        margin-bottom: 40px;
-        font-weight: 300;
-        font-size: 20px;
+        margin-bottom: 30px;
+        font-weight: 100;
+        font-size: 18px;
+        font-family: ${({ theme }) => theme.fonts.secondary};
         b {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             text-transform: uppercase;
+        }
+    }
+
+    h3{
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 30px;
+        color: ${({ theme }) => theme.colors.white};
+        text-transform: uppercase;
+
+        b {
+            font-weight: 500;
         }
     }
 

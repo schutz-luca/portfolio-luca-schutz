@@ -9,7 +9,7 @@ import { DeveloperContent } from './DeveloperContenxt';
 import { DesignerContent } from './DesignerContent';
 import { HumanContent } from './HumanContent';
 
-export const About = () => {
+export const Skills = () => {
     const cards: ICard[] = [
         {
             id: '0',
@@ -45,8 +45,8 @@ export const About = () => {
     const onClose = () => setDisableScroll(false);
 
     return (
-        <AnimatedSection id='about'>
-            <h2>what am I good at?</h2>
+        <AnimatedSection id='skills'>
+            <h2>my skills</h2>
             <Cards cards={cards} onSelect={onSelect} onClose={onClose} />
         </AnimatedSection>
     );

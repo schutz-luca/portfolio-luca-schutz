@@ -6,7 +6,7 @@ import CinebingoCover from '@/public/assets/images/projects/cinebingo-cover.jpg'
 import CinebingoLogo from '@/public/assets/images/projects/cinebingo-logo.png';
 import { StyProjects } from './styles';
 import { ProjectProps } from '@/src/components/project/types';
-import { FaGithub } from 'react-icons/fa';
+import { FaChevronRight, FaGithub } from 'react-icons/fa';
 
 const projects: ProjectProps[] = [
     {
@@ -51,14 +51,15 @@ export const Projects = () => (
     <AnimatedSection id='projects'>
         <h2>own projects</h2>
         <StyProjects>
+            <p>
+                Most of the projects I’ve worked on are proprietary and protected by <b>company confidentiality agreements</b>.
+                Below are some personal projects that showcases my technical and creative skills:
+            </p>
             {projects.map(project => <Project {...project} key={project.title} />)}
-            <div className='more'>
-                Check more projects on my
-                <a href='https://github.com/schutz-luca'>
-                    GitHub
-                    <FaGithub />
-                </a>
-            </div>
+            <a href='https://github.com/schutz-luca?tab=repositories' className='more' target='_blank' rel='noopener noreferrer'>
+                View full projects list
+                <FaChevronRight />
+            </a>
         </StyProjects>
     </AnimatedSection>
 );

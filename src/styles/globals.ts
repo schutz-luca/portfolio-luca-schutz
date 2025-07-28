@@ -88,11 +88,16 @@ export default createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 12rem;
     padding-top: 6rem;
+    padding-bottom: 18rem;
 
     &:last-child{
       margin-bottom: 0;
+    }
+
+    @media ${devices.tabletS} {
+        padding-top: 0;
+        padding-bottom: 10rem;
     }
 
     @media ${devices.heightBreak} {
@@ -144,8 +149,9 @@ export default createGlobalStyle`
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 50px;
     padding: 10px 0;
+    font-weight: 500;
   }
 
   a {
