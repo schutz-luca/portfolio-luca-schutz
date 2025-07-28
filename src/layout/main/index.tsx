@@ -1,7 +1,7 @@
 
 import { useScroll, useSpring, motion } from 'framer-motion';
 import Link from 'next/link';
-import { useCallback, useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import { AiOutlineBehance, AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { ThemeProvider } from 'styled-components';
 import { CircleText } from '@/src/components/circle-text';
@@ -16,8 +16,6 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     const [loading, setLoading] = useState(true);
     const [sections, setSections] = useState<HTMLElement[]>([]);
     const [activeSection, setActiveSection] = useState<number>(0);
-    // const [waitScroll, setWaitScroll] = useState(false);
-    // const [isKeyUp, setIsKeyUp] = useState(true);
 
     const { theme } = useContext(AppManagerContext);
 
@@ -36,62 +34,6 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         behavior: 'smooth'
     });
 
-    // const goToFirstSection = useCallback(() => setActiveSection(0), []);
-    // const goToLastSection = useCallback(() => setActiveSection(sections.length - 1), [sections.length]);
-
-    // const changeSection = useCallback((value: number) => {
-    //     const currentIndex = activeSection - value;
-    //     const currentSection = sections ? sections[currentIndex] : null;
-
-    //     if (!currentSection || waitScroll || currentIndex === activeSection)
-    //         return;
-
-    //     setActiveSection(currentIndex);
-    //     setWaitScroll(true);
-    // }, [waitScroll, activeSection, sections]);
-
-
-    // const handleMouseWheel = useCallback((event: any) => {
-    //     event.preventDefault();
-    //     event.stopPropagation();
-
-    //     const value = Math.sign(event.wheelDeltaY);
-    //     changeSection(value);
-    // }, [changeSection]);
-
-    // const handleKeyUp = useCallback(() => {
-    //     if (!isKeyUp)
-    //         setIsKeyUp(true);
-    // }, [isKeyUp]);
-
-    // const handleKeyDown = useCallback((event: any) => {
-    //     const downwardKeys = ['Down', ' ', 'Spacebar', 'ArrowDown', 'Right', 'PageDown', 'ArrowRight'];
-    //     const upwardKeys = ['Up', 'ArrowUp', 'Left', 'PageUp', 'ArrowLeft'];
-
-    //     // Prevent running multiple events in keydown
-    //     if (isKeyUp)
-    //         setIsKeyUp(false);
-    //     else {
-    //         if (downwardKeys.includes(event.key) || upwardKeys.includes(event.key))
-    //             event.preventDefault();
-    //         return;
-    //     }
-
-    //     if (downwardKeys.includes(event.key)) {
-    //         event.preventDefault();
-    //         changeSection(-1);
-    //     } else if (upwardKeys.includes(event.key)) {
-    //         event.preventDefault();
-    //         changeSection(1);
-    //     } else if (event.key === 'Home') {
-    //         event.preventDefault();
-    //         goToFirstSection();
-    //     } else if (event.key === 'End') {
-    //         event.preventDefault();
-    //         goToLastSection();
-    //     }
-    // }, [isKeyUp, changeSection, goToFirstSection, goToLastSection]);
-
     const sectionToIndex = (selectedSection: string) => {
         const sectionsId = sections.map(section => section.id);
         return sectionsId?.indexOf(selectedSection);
@@ -101,9 +43,7 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     useEffect(() => {
         const currentSection = sections ? sections[activeSection] : undefined;
 
-        if (currentSection) {
-            scrollTo(currentSection.offsetTop);
-        }
+        if (currentSection) scrollTo(currentSection.offsetTop);
         // eslint-disable-next-line
     }, [activeSection, sections]);
 
@@ -117,16 +57,6 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         }
     }, [loading]);
 
-    // Mousewheel interval
-    // useEffect(() => {
-    //     if (waitScroll) {
-    //         const interval = setInterval(() => {
-    //             setWaitScroll(false);
-    //         }, 500);
-    //         return () => clearInterval(interval);
-    //     }
-    // }, [waitScroll]);
-
     useEffect(() => {
         const section = window.location.href.split('#')[1];
         const index = sectionToIndex(section);
@@ -136,23 +66,6 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
 
         // eslint-disable-next-line
     }, [sections]);
-
-    // Handle with listeners
-    // useEffect(() => {
-    //     if (!isMainPage)
-    //         return;
-
-    //     document.addEventListener('mousewheel', handleMouseWheel, { passive: false });
-    //     document.addEventListener('keydown', handleKeyDown);
-    //     document.addEventListener('keyup', handleKeyUp);
-
-    //     return () => {
-    //         document.removeEventListener('mousewheel', handleMouseWheel);
-    //         document.removeEventListener('keydown', handleKeyDown);
-    //         document.removeEventListener('keyup', handleKeyUp);
-    //     };
-
-    // }, [waitScroll, activeSection, isMainPage, sections, handleMouseWheel, handleKeyDown, handleKeyUp]);
 
     // Create an HTMLElement array with children elements
     useEffect(() => {

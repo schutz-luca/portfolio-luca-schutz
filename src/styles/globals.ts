@@ -25,8 +25,6 @@ export default createGlobalStyle`
       background-color: ${theme.background};
       opacity: 1;
       `
-  // background: radial-gradient(circle at top left,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%) , radial-gradient(circle at bottom left,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%), radial-gradient(circle at top right ,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%) , radial-gradient(circle at bottom right,transparent 9%, ${theme.backgroundSoft} 10% ,${theme.backgroundSoft} 15% , transparent 16%),radial-gradient(circle, transparent 25%, ${theme.background}  26%),linear-gradient(45deg, transparent 46%, ${theme.backgroundSoft} 47%, ${theme.backgroundSoft} 52%, transparent 53%), linear-gradient(135deg, transparent 46%, ${theme.backgroundSoft} 47%, ${theme.backgroundSoft} 52%, transparent 53%);
-  // background: radial-gradient(circle at center ,${theme.backgroundSoft}, ${theme.backgroundSoft} 10%, transparent 10%, transparent  20%, ${theme.backgroundSoft} 20%, ${theme.backgroundSoft} 30%, transparent 30%, transparent 40%, ${theme.backgroundSoft} 40%, ${theme.backgroundSoft} 50%, transparent 50%, transparent 60%, ${theme.backgroundSoft} 60%, ${theme.backgroundSoft} 70%, transparent 70%, transparent 80%, ${theme.backgroundSoft} 80%, ${theme.backgroundSoft} 90%, transparent 90%);
   }
 
     -webkit-animation: rainbow 100s linear infinite;
@@ -87,12 +85,11 @@ export default createGlobalStyle`
   section {
     box-sizing: border-box;
     width: 100%;
-    /* height: calc(100vh - 70px); */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 12rem;
-    margin-top: 6rem;
+    padding-bottom: 12rem;
+    padding-top: 6rem;
 
     &:last-child{
       margin-bottom: 0;
