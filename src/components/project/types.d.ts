@@ -5,5 +5,5 @@ export interface ProjectProps {
     link: string
     code: string
     cover: StaticImageData
-    techs: string[]
+    techs: { name: string, kind: 'frontend' | 'backend' | 'other' }[]
 }

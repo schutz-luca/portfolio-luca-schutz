@@ -1,4 +1,5 @@
+export type BubbleColors = 'default' | 'purple' | 'orange';
 export interface BubbleProps {
     text: string;
-    color?: 'default' | 'purple' | 'orange' = 'default';
+    color?: BubbleColors
 }

@@ -2,6 +2,13 @@ import Image from 'next/image';
 import { StyProject } from './styles';
 import { ProjectProps } from './types.d';
 import { Bubble } from '../bubble';
+import { BubbleColors } from '../bubble/types';
+
+const techColors = {
+    frontend: 'default',
+    backend: 'purple',
+    other: 'orange'
+}
 
 export const Project = ({
     title,
@@ -22,7 +29,7 @@ export const Project = ({
                 <h4>{subTitle}</h4>
                 <p>{description}</p>
                 <div className='techs'>
-                    {techs.map(tech => <Bubble key={tech} text={tech} />)}
+                    {techs.map(tech => <Bubble key={tech.name} text={tech.name} color={techColors[tech.kind] as BubbleColors} />)}
                 </div>
             </div>
             <div className='links'>
