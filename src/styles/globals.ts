@@ -86,11 +86,12 @@ export default createGlobalStyle`
   section {
     box-sizing: border-box;
     width: 100%;
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
+    margin-top: 6rem;
 
     &:last-child{
       margin-bottom: 0;

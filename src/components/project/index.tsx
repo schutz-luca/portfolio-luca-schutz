@@ -9,7 +9,7 @@ const techColors = {
     frontend: 'default',
     backend: 'purple',
     other: 'orange'
-};
+}
 
 export const Project = ({
     title,

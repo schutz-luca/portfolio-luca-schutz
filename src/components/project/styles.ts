@@ -1,3 +1,4 @@
+import { devices } from '@/src/styles/devices';
 import styled from 'styled-components';
 
 export const StyProject = styled.div`
@@ -8,12 +9,15 @@ export const StyProject = styled.div`
     border-bottom: 5px solid ${({ theme }) => theme.colors.darkGray};
     padding: 30px;
     background: #00000060;
-    border-radius: 10px 10px 0 0;;
+    border-radius: 10px 10px 0 0;
+
+    @media ${devices.laptopL} {
+        flex-direction: column-reverse;
+    }
 
     .content{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         gap: 10px;
 
         h3 {
@@ -32,6 +36,7 @@ export const StyProject = styled.div`
 
     .techs{
         margin: 10px 0;
+        width: 100%;
 
         span{
             display: inline-block;
@@ -46,6 +51,7 @@ export const StyProject = styled.div`
         width: 500px;
         /* min-width: 400px; */
         object-fit: cover;
+        object-position: top;
         filter: saturate(0) brightness(0.8) blur(2px);
         transition: all ease-out 0.3s;
 
@@ -61,7 +67,7 @@ export const StyProject = styled.div`
     }
 
     .logo {
-        max-height: 60px;
+        max-height: 50px;
         max-width: fit-content;
         margin-bottom: 20px;
     }
@@ -78,7 +84,7 @@ export const StyProject = styled.div`
 
     .links{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
         margin-bottom: 10px;
 
