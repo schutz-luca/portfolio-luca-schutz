@@ -16,8 +16,8 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     const [loading, setLoading] = useState(true);
     const [sections, setSections] = useState<HTMLElement[]>([]);
     const [activeSection, setActiveSection] = useState<number>(0);
-    const [waitScroll, setWaitScroll] = useState(false);
-    const [isKeyUp, setIsKeyUp] = useState(true);
+    // const [waitScroll, setWaitScroll] = useState(false);
+    // const [isKeyUp, setIsKeyUp] = useState(true);
 
     const { theme } = useContext(AppManagerContext);
 
@@ -36,61 +36,61 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
         behavior: 'smooth'
     });
 
-    const goToFirstSection = useCallback(() => setActiveSection(0), []);
-    const goToLastSection = useCallback(() => setActiveSection(sections.length - 1), [sections.length]);
+    // const goToFirstSection = useCallback(() => setActiveSection(0), []);
+    // const goToLastSection = useCallback(() => setActiveSection(sections.length - 1), [sections.length]);
 
-    const changeSection = useCallback((value: number) => {
-        const currentIndex = activeSection - value;
-        const currentSection = sections ? sections[currentIndex] : null;
+    // const changeSection = useCallback((value: number) => {
+    //     const currentIndex = activeSection - value;
+    //     const currentSection = sections ? sections[currentIndex] : null;
 
-        if (!currentSection || waitScroll || currentIndex === activeSection)
-            return;
+    //     if (!currentSection || waitScroll || currentIndex === activeSection)
+    //         return;
 
-        setActiveSection(currentIndex);
-        setWaitScroll(true);
-    }, [waitScroll, activeSection, sections]);
+    //     setActiveSection(currentIndex);
+    //     setWaitScroll(true);
+    // }, [waitScroll, activeSection, sections]);
 
 
-    const handleMouseWheel = useCallback((event: any) => {
-        event.preventDefault();
-        event.stopPropagation();
+    // const handleMouseWheel = useCallback((event: any) => {
+    //     event.preventDefault();
+    //     event.stopPropagation();
 
-        const value = Math.sign(event.wheelDeltaY);
-        changeSection(value);
-    }, [changeSection]);
+    //     const value = Math.sign(event.wheelDeltaY);
+    //     changeSection(value);
+    // }, [changeSection]);
 
-    const handleKeyUp = useCallback(() => {
-        if (!isKeyUp)
-            setIsKeyUp(true);
-    }, [isKeyUp]);
+    // const handleKeyUp = useCallback(() => {
+    //     if (!isKeyUp)
+    //         setIsKeyUp(true);
+    // }, [isKeyUp]);
 
-    const handleKeyDown = useCallback((event: any) => {
-        const downwardKeys = ['Down', ' ', 'Spacebar', 'ArrowDown', 'Right', 'PageDown', 'ArrowRight'];
-        const upwardKeys = ['Up', 'ArrowUp', 'Left', 'PageUp', 'ArrowLeft'];
+    // const handleKeyDown = useCallback((event: any) => {
+    //     const downwardKeys = ['Down', ' ', 'Spacebar', 'ArrowDown', 'Right', 'PageDown', 'ArrowRight'];
+    //     const upwardKeys = ['Up', 'ArrowUp', 'Left', 'PageUp', 'ArrowLeft'];
 
-        // Prevent running multiple events in keydown
-        if (isKeyUp)
-            setIsKeyUp(false);
-        else {
-            if (downwardKeys.includes(event.key) || upwardKeys.includes(event.key))
-                event.preventDefault();
-            return;
-        }
+    //     // Prevent running multiple events in keydown
+    //     if (isKeyUp)
+    //         setIsKeyUp(false);
+    //     else {
+    //         if (downwardKeys.includes(event.key) || upwardKeys.includes(event.key))
+    //             event.preventDefault();
+    //         return;
+    //     }
 
-        if (downwardKeys.includes(event.key)) {
-            event.preventDefault();
-            changeSection(-1);
-        } else if (upwardKeys.includes(event.key)) {
-            event.preventDefault();
-            changeSection(1);
-        } else if (event.key === 'Home') {
-            event.preventDefault();
-            goToFirstSection();
-        } else if (event.key === 'End') {
-            event.preventDefault();
-            goToLastSection();
-        }
-    }, [isKeyUp, changeSection, goToFirstSection, goToLastSection]);
+    //     if (downwardKeys.includes(event.key)) {
+    //         event.preventDefault();
+    //         changeSection(-1);
+    //     } else if (upwardKeys.includes(event.key)) {
+    //         event.preventDefault();
+    //         changeSection(1);
+    //     } else if (event.key === 'Home') {
+    //         event.preventDefault();
+    //         goToFirstSection();
+    //     } else if (event.key === 'End') {
+    //         event.preventDefault();
+    //         goToLastSection();
+    //     }
+    // }, [isKeyUp, changeSection, goToFirstSection, goToLastSection]);
 
     const sectionToIndex = (selectedSection: string) => {
         const sectionsId = sections.map(section => section.id);
@@ -118,14 +118,14 @@ export const MainLayout = ({ children, headerItems, isMainPage }: MainLayoutProp
     }, [loading]);
 
     // Mousewheel interval
-    useEffect(() => {
-        if (waitScroll) {
-            const interval = setInterval(() => {
-                setWaitScroll(false);
-            }, 500);
-            return () => clearInterval(interval);
-        }
-    }, [waitScroll]);
+    // useEffect(() => {
+    //     if (waitScroll) {
+    //         const interval = setInterval(() => {
+    //             setWaitScroll(false);
+    //         }, 500);
+    //         return () => clearInterval(interval);
+    //     }
+    // }, [waitScroll]);
 
     useEffect(() => {
         const section = window.location.href.split('#')[1];

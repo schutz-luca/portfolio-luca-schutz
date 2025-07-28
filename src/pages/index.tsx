@@ -12,7 +12,6 @@ const HomePage = () => (
             { href: '/', text: 'about' },
             { href: '/', text: 'projects' },
             { href: '/', text: 'contact' },
-            { href: '/todo', text: 'todo list' }
         ]}
         isMainPage
     >

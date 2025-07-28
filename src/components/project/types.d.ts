@@ -1,7 +1,7 @@
 export interface ProjectProps {
     title: string
-    subTitle: string
-    description: string
+    logo?: StaticImageData
+    texts: string[]
     link: string
     code: string
     cover: StaticImageData

@@ -5,6 +5,7 @@ export const StyBubble = styled.span`
     color: ${({ theme }) => theme.primary};
     border-radius: 5px;
     font-weight: 400;
+    font-size: 14px;
     padding: 3px 6px;
     margin-right: 8px;
     margin-top: 10px;

@@ -78,6 +78,11 @@ export default createGlobalStyle`
     }
   }
 
+  p {
+    font: 400 1rem ${({ theme }) => theme.fonts.secondary};
+    color: ${({ theme }) => theme.text}cc;
+  }
+
   section {
     box-sizing: border-box;
     width: 100%;
@@ -86,6 +91,10 @@ export default createGlobalStyle`
     justify-content: center;
     align-items: center;
     margin-bottom: 8rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
 
     @media ${devices.heightBreak} {
       display: block;
