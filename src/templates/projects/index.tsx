@@ -53,7 +53,7 @@ export const Projects = () => (
         <StyProjects>
             {projects.map(project => <Project {...project} key={project.title} />)}
             <div className='more'>
-                Check more project on my
+                Check more projects on my
                 <a href='https://github.com/schutz-luca'>
                     GitHub
                     <FaGithub />

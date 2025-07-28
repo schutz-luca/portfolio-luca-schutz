@@ -8,7 +8,7 @@ import { FaCode, FaGlobe } from 'react-icons/fa';
 const techColors = {
     frontend: 'default',
     backend: 'purple',
-    other: 'orange'
+    other: 'waterGreen'
 }
 
 export const Project = ({
@@ -25,7 +25,7 @@ export const Project = ({
         <div className='content'>
             <div className='content-text'>
                 {logo ?
-                    <Image src={logo} alt={`${title} project's logo`} className='logo' /> :
+                    <div><Image src={logo} alt={`${title} project's logo`} className='logo' /></div> :
                     <h3>{title}</h3>
 
                 }

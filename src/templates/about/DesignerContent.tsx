@@ -13,7 +13,7 @@ export const DesignerContent = () => (
             <h4>Specialist</h4>
             <div className='flex'>
                 <Bubble text='Adobe Photoshop' />
-                <Bubble text='Figma' color='orange' />
+                <Bubble text='Figma' color='waterGreen' />
                 <Bubble text='Adobe Premiere' color='purple' />
             </div>
             <div className='divisor' />

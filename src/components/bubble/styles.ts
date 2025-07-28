@@ -19,9 +19,9 @@ export const StyBubble = styled.span`
         color: ${({ theme }) => theme.colors.purple};
     }
 
-    &.orange {
-        border: solid 1px ${({ theme }) => theme.colors.orange};
-        color: ${({ theme }) => theme.colors.orange};
+    &.waterGreen {
+        border: solid 1px ${({ theme }) => theme.colors.waterGreen};
+        color: ${({ theme }) => theme.colors.waterGreen};
     }
 
     &:hover {

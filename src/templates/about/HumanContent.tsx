@@ -20,8 +20,8 @@ export const HumanContent = () => (
             <div className='divisor' />
             <h4>Subjects I am interested in</h4>
             <div className='flex'>
-                <Bubble text='Music Production' color='orange' />
-                <Bubble text='Guitars' color='orange' />
+                <Bubble text='Music Production' color='waterGreen' />
+                <Bubble text='Guitars' color='waterGreen' />
                 <Bubble text='Psychoanalysis' color='purple' />
                 <Bubble text='Carl Jung' color='purple' />
                 <Bubble text='Existentialism' color='purple' />

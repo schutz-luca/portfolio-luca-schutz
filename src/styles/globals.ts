@@ -62,6 +62,7 @@ export default createGlobalStyle`
     -ms-overflow-style: scrollbar;
     /* background: black; */
     ${({ theme }) => theme.id === 'colorful' ? `background: ${theme.background};` : ''}
+    background-attachment: fixed;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }

@@ -1,4 +1,5 @@
 import { devices } from '@/src/styles/devices';
+import { themeDark } from '@/src/styles/theme';
 import styled from 'styled-components';
 
 export const StyProject = styled.div`
@@ -8,7 +9,7 @@ export const StyProject = styled.div`
     gap: 30px;
     border-bottom: 5px solid ${({ theme }) => theme.colors.darkGray};
     padding: 30px;
-    background: #00000060;
+   background: ${themeDark.backgroundSoft};
     border-radius: 10px 10px 0 0;
 
     @media ${devices.laptopL} {
@@ -20,15 +21,15 @@ export const StyProject = styled.div`
         flex-direction: column;
         gap: 10px;
 
+        p,h3{
+            color: ${({ theme }) => theme.colors.white};
+        }
+
         h3 {
             font-size: 2rem;
             margin-bottom: 10px;
         }
 
-        h4{
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
         p {
             font-weight: 300;
         }
@@ -45,14 +46,13 @@ export const StyProject = styled.div`
     }
 
     .cover {
-        background: #00000090;
         border-radius: 10px;
         height: 250px;
         width: 500px;
         /* min-width: 400px; */
         object-fit: cover;
         object-position: top;
-        filter: saturate(0) brightness(0.8) blur(2px);
+        filter: saturate(0) brightness(0.8);
         transition: all ease-out 0.3s;
 
         &:hover {
@@ -96,6 +96,7 @@ export const StyProject = styled.div`
             background: ${({ theme }) => theme.colors.darkGray};
             padding: 10px 20px;
             border-radius: 10px;
+            color: ${({ theme }) => theme.colors.white};
 
             svg{
                 font-size: 22px;
