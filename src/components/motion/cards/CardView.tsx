@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC } from 'react';
+import { MdClose } from 'react-icons/md';
 import { CardViewProps } from './types';
 
 export const CardView: FC<CardViewProps> = ({ card, closeView }) => {
@@ -11,6 +12,9 @@ export const CardView: FC<CardViewProps> = ({ card, closeView }) => {
     <>
       <div className='card-content-container open'>
         <motion.div className='card-content' layoutId={`card-container-${id}`}>
+          <div className='card-close' onClick={closeView}>
+            <MdClose />
+          </div>
           <motion.div className='card-image-container open'>
             {imageCredit &&
               <Link href={imageCredit.link} target='_blank' className='image-credit'>

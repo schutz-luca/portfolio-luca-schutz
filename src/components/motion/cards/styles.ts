@@ -68,6 +68,10 @@ export const StyCardContainer = styled.div`
     padding: 80px 0;
     pointer-events: none;
 
+    @media ${devices.tabletS} {
+      padding: 0;
+      padding-top: 80px;
+    }
   }
 
   .card-content {
@@ -78,6 +82,19 @@ export const StyCardContainer = styled.div`
     width: 100%;
     height: 100%;
     margin: 0 auto;
+
+    @media ${devices.tabletS} {
+      border-radius: 0;
+    }
+
+    .card-close {
+      position: absolute;
+      font-size: 25px;
+      right: 10px;
+      top: 10px;
+      z-index: 12;
+      cursor: pointer;
+    }
   }
 
   .read-more{
@@ -114,7 +131,10 @@ export const StyCardContainer = styled.div`
     pointer-events: visible;
 
     @media ${devices.laptop} {
-      max-width: 80%;
+      max-width: 70%;
+    }
+    @media ${devices.tabletS} {
+      min-width: 100%;
     }
   }
 
@@ -301,7 +321,7 @@ export const StyCardContainer = styled.div`
 
       @media (max-width: 800px){
         .description{
-          font-size: 12px;
+          font-size: 14px;
           line-height: 18px;    
         }
       }
@@ -317,14 +337,14 @@ export const StyCardContainer = styled.div`
       .description {
         @media (max-height: 725px){
           font-size: 14px;
-            line-height: 18px;
+          line-height: 18px;
         }
         
         @media (max-height: 665px) {
           display: none;
         }
         
-        @media (max-width: 770px){
+        @media ${devices.mobileM}{
           display: none;
         }
       }
