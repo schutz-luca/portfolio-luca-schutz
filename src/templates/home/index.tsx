@@ -9,7 +9,7 @@ export const Home = () => (
         <StyHome>
             <div className='flex-row'>
                 <div className='text-container'>
-                    <p className='presenting'>hey, my name is</p>
+                    <p className='presenting'>hey! nice to meet you, I&apos;m</p>
                     <h1>
                         <small>Luca</small>
                         <b>Schutz</b>
