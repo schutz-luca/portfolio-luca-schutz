@@ -14,7 +14,7 @@ const projects: ProjectProps[] = [
         logo: StorytellerLogo,
         texts: [
             'Gain insights by generating pertinent narratives through 10 simple, strategically chosen questions.',
-            'Storyteller is a creative support tool designed for those who want to speed up creative processes and connect more empathetically with their audience. Ideal for bringing ideas to life and overcoming creative blocks while keeping up with the fast pace of trends.'
+            'Storyteller is a creative AI support tool designed for those who want to speed up creative processes and connect more empathetically with their audience. Ideal for bringing ideas to life and overcoming creative blocks while keeping up with the fast pace of trends.'
         ],
         link: 'https://storyteller-webapp.vercel.app/',
         code: 'https://github.com/schutz-luca/storyteller-webapp',
@@ -52,8 +52,7 @@ export const Projects = () => (
         <h2>own projects</h2>
         <StyProjects>
             <p>
-                Most of the projects I’ve worked on are proprietary and protected by <b>company confidentiality agreements</b>.
-                Below are some personal projects that showcases my technical and creative skills:
+                Due to <b>confidentiality agreements</b> with the companies I’ve collaborated with, most of the projects I’ve worked on cannot be <b>publicly shared</b>. Below is a selection of personal projects that reflect my technical expertise and creative vision:
             </p>
             {projects.map(project => <Project {...project} key={project.title} />)}
             <a href='https://github.com/schutz-luca?tab=repositories' className='more' target='_blank' rel='noopener noreferrer'>

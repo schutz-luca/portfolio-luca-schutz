@@ -19,6 +19,7 @@ export const StyProject = styled.div`
     .content{
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
 
         p,h3{
@@ -88,6 +89,7 @@ export const StyProject = styled.div`
         justify-content: flex-start;
         gap: 10px;
         margin-bottom: 10px;
+        width: fit-content;
 
         a {
             display: flex;

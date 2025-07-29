@@ -21,7 +21,7 @@ export const Home = () => (
                     </p>
                     <br />
                     <p>
-                        In a time when machines are increasingly becoming more human-like, I strive to find ways to <b>create impactful experiences</b> and use technology not only to solve problems, <b>but to connect people</b>.
+                        In a time when machines are increasingly becoming more human-like, I strive to find ways to <b>create impactful experiences</b> and use technology not only to solve problems, <b>but to connect people</b> to ideas and special feelings.
                     </p>
                 </div>
                 <div className='image-container'>

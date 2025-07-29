@@ -340,6 +340,10 @@ export const StyCardContainer = styled.div`
     line-height: 28px;
     font-weight: 200;
 
+    b {
+      font-weight: 600;
+    }
+
     @media ${devices.tablet}{
         font-size: 16px;
       }

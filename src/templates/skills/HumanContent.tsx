@@ -1,34 +1,38 @@
-import { Bubble } from '@/src/components/bubble';
+import Link from 'next/link';
+import { SkillContent } from '@/src/components/skill-content';
 
-export const HumanContent = () => (
-    <>
-        <p className='description'>
-            Ever since I was a child, I&apos;ve always enjoyed trying to understand the world and the people around me.
-            I looked in art, music, philosophy, astronomy, psychology for solutions to my doubts,
-            I found results that made me someone very emotionally mature.
-        </p>
-        <div className='skills'>
-            <h4>Soft Skills</h4>
-            <div className='flex'>
-                <Bubble text='Nonviolent Communication' />
-                <Bubble text='Critical Thinking' color='purple' />
-                <Bubble text='Creativity' color='purple' />
-                <Bubble text='Emotional Intelligence' color='purple' />
-                <Bubble text='People Management' />
-                <Bubble text='Self Teached' />
-            </div>
-            <div className='divisor' />
-            <h4>Subjects I am interested in</h4>
-            <div className='flex'>
-                <Bubble text='Music Production' color='waterGreen' />
-                <Bubble text='Guitars' color='waterGreen' />
-                <Bubble text='Psychoanalysis' color='purple' />
-                <Bubble text='Carl Jung' color='purple' />
-                <Bubble text='Existentialism' color='purple' />
-                <Bubble text='Stoicism' color='purple' />
-                <Bubble text='Quantum Mechanics' />
-                <Bubble text='Astronomy' />
-            </div>
-        </div>
-    </>
-);
+const skills = {
+    'Soft Skills': [
+        { text: 'Nonviolent Communication' },
+        { text: 'Design Thinking' },
+        { text: 'People Management' },
+        { text: 'Self Teached' },
+        { text: 'Critical Thinking', color: 'purple' },
+        { text: 'Creativity', color: 'purple' },
+        { text: 'Emotional Intelligence', color: 'purple' }
+    ],
+    'Subjects I am interested in': [
+        { text: 'Music Production', color: 'waterGreen' },
+        { text: 'Guitars', color: 'waterGreen' },
+        { text: 'Psychoanalysis', color: 'purple' },
+        { text: 'Existentialism', color: 'purple' },
+        { text: 'Stoicism', color: 'purple' },
+        { text: 'Quantum Mechanics' },
+        { text: 'Astronomy' }
+    ]
+};
+
+export const HumanContent = () =>
+    <SkillContent
+        description={
+            <>
+                Since childhood, I&apos;ve been driven by a deep curiosity to understand the world and the people around me. I explored art, music, philosophy, astronomy, and psychology in search of answers.
+                <br />
+                Along the way, I developed a strong sense of emotional maturity that continues to shape the way I think, create, and connect, giving meaning to my life.
+                <br />
+                <br />
+                I like to share some of my thoughts whenever possible. Check it out at my <Link href='https://schutz-luca.medium.com/' target='_blank'>Medium profile</Link>
+            </>
+        }
+        skills={skills}
+    />;
