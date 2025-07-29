@@ -1,8 +1,8 @@
-<h1 align="center">Portfolio: Schutzverse ⚛️</h1>
+<h1 align="center">Portfolio: Luca Schutz ⚛️</h1>
 
 This project is a showcase of my work and professional profile, putting into practice a refined design with modern technologies. Developed with **[Next.js](https://nextjs.org/)** and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Access the project running in production by clicking [here](https://portfolio-schutzverse.vercel.app/).
+Access the project running in production by clicking [here](https://portfolio-luca-schutz.vercel.app/).
 
 ## 🚀 Technical Features
 - Internal REST endpoints creation with **[Next API](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)**
@@ -30,14 +30,14 @@ To use ToDo List showcase:
 Clone this repository to your local machine using:
 
 ```bash
-git clone https://github.com/schutz-luca/portfolio-schutzverse.git
+git clone https://github.com/schutz-luca/portfolio-luca-schutz.git
 ```
 
 ### 3. Navigate to the project folder
 Move into the project's directory:
 
 ```bash
-cd portfolio-schutzverse
+cd portfolio-luca-schutz
 ```
 
 ### 4. Install dependencies
