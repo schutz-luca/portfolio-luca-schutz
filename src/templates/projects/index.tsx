@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { FaChevronRight } from 'react-icons/fa';
 import { AnimatedSection } from '@/src/components/motion';
 import { Project } from '@/src/components/project';
 import StorytellerCover from '@/public/assets/images/projects/storyteller-cover.jpg';
@@ -6,7 +8,6 @@ import CinebingoCover from '@/public/assets/images/projects/cinebingo-cover.jpg'
 import CinebingoLogo from '@/public/assets/images/projects/cinebingo-logo.png';
 import { StyProjects } from './styles';
 import { ProjectProps } from '@/src/components/project/types';
-import { FaChevronRight, FaGithub } from 'react-icons/fa';
 
 const projects: ProjectProps[] = [
     {
@@ -55,10 +56,10 @@ export const Projects = () => (
                 Due to <b>confidentiality agreements</b> with the companies I’ve collaborated with, most of the projects I’ve worked on cannot be <b>publicly shared</b>. Below is a selection of personal projects that reflect my technical expertise and creative vision:
             </p>
             {projects.map(project => <Project {...project} key={project.title} />)}
-            <a href='https://github.com/schutz-luca?tab=repositories' className='more' target='_blank' rel='noopener noreferrer'>
+            <Link href='https://github.com/schutz-luca?tab=repositories' className='more' target='_blank'>
                 View full projects list
                 <FaChevronRight />
-            </a>
+            </Link>
         </StyProjects>
     </AnimatedSection>
 );

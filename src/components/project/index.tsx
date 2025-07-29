@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { StyProject } from './styles';
 import { ProjectProps } from './types.d';
@@ -35,8 +36,8 @@ export const Project = ({
                 </div>
             </div>
             <div className='links'>
-                <a href={link} target='_blank' rel='noopener noreferrer'>Live <FaGlobe /></a>
-                <a href={code} target='_blank' rel='noopener noreferrer'>Code <FaCode /></a>
+                <Link href={link} target='_blank'>Live <FaGlobe /></Link>
+                <Link href={code} target='_blank'>Code <FaCode /></Link>
             </div>
         </div>
     </StyProject>
