@@ -17,7 +17,7 @@ export const Home = () => (
                     <h2><b>Front-end Expert</b> {'//'} <b>Full-stack Engineer</b> {'//'} <b>Tech Lead</b></h2>
                     <p>
                         <b>Software Architect</b> focused in <b>Creative Solutions</b>. Postgraduated in Software Architecture & Solutions, skilled across the full digital product lifecycle, from
-                        requirements to front-end and back-end development, CI/CD in the cloud, version control, and production release management.
+                        requirements to front-end and back-end development, CI/CD using cloud services, version control, and worldwide production release management.
                     </p>
                     <br />
                     <p>
