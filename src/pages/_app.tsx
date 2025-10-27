@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeManagerProvider } from '@/src/context/app-manager';
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </ThemeManagerProvider>
       </SessionProvider>
+      <Analytics />
     </>
   );
 }
