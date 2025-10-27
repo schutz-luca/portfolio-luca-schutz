@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from '@vercel/analytics/next';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeManagerProvider } from '@/src/context/app-manager';
